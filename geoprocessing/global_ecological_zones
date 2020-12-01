@@ -1,0 +1,35 @@
+Global Ecological Zones (second edition) FAO 2010
+
+# Processed data access
+Google Drive: https://drive.google.com/drive/folders/1hFA1tnh6s3W-RyC2LCzrs_1FmKEtzc8o?usp=sharing
+filename: "GEZ_2010_WGS84.geojson"
+
+=====================================
+# Source Data
+Direct Download: http://www.fao.org/geonetwork/srv/en/resources.get?id=47105&fname=gez2010.zip&access=private
+Access: http://www.fao.org/geonetwork/srv/en/main.home?uuid=2fb209d0-fd34-4e5e-a3d8-a13c241eb61b#
+Licence: check licence file
+
+=====================================
+
+# Check Topology - manual in GIS, remove overlaps, fix gaps
+
+=====================================
+
+# Repair geometry (ArcGIS or QGIS) & convert to geojson
+
+# Import arcpy module
+import arcpy
+
+# Local variables:
+input = "C:/folder/gez_2010_wgs84.shp"
+Output_Coordinate_System = "GEOGCS['GCS_WGS_1984',DATUM['D_WGS_1984',SPHEROID['WGS_1984',6378137.0,298.257223563]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]]"
+output = "C:/folder/gez_2010_wgs84_FeaturesToJSON.geojson"
+
+# Process: Repair Geometry
+arcpy.RepairGeometry_management(input, "DELETE_NULL")
+
+# Process: Features To JSON
+arcpy.env.outputCoordinateSystem = Output Coordinate System
+arcpy.FeaturesToJSON_conversion(input, output, "NOT_FORMATTED", "NO_Z_VALUES", "NO_M_VALUES", "GEOJSON")
+Output_has_Z_Values = "Disabled"
