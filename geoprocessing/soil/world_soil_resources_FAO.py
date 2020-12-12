@@ -1,32 +1,28 @@
-World Soil Resources Base Map FAO 2014
+# World Soil Resources Base Map FAO 2014
 
-# Processed data access
-Access: https://drive.google.com/drive/folders/1HHpzw8ySHv3-SkSw9aIJrJTpAFVIQpaP
-Folder: /World_datasets/Soil
+# Processed data access Access: https://drive.google.com/drive/folders/1HHpzw8ySHv3-SkSw9aIJrJTpAFVIQpaP  Folder: /World_datasets/Soil
 
 =====================================
 
 # Data source
-Original spatial data sourced from: http://www.fao.org/soils-portal/data-hub/soil-maps-and-databases/other-global-soil-maps-and-databases/
-World Soil Resources Coverage in Geographic Projection (ARC/Info Export format) "wsrll"
-Reports: http://www.fao.org/soils-portal/data-hub/soil-classification/world-reference-base/en/
+#Original spatial data sourced from: http://www.fao.org/soils-portal/data-hub/soil-maps-and-databases/other-global-soil-maps-and-databases/
+#World Soil Resources Coverage in Geographic Projection (ARC/Info Export format) "wsrll"
+#Reports: http://www.fao.org/soils-portal/data-hub/soil-classification/world-reference-base/en/
 
 # Description
-The World Resource Base Map of World Soil Resources is available at 1:25 000 000 scale. This is the most general digital map of the World's soils, now using the international standard soil classification WRB. Available as a graphic or digital coverage.
-
-Soil Type underpins the processes for estimating the changes in SOC as a result of changes to land use. Soil Type, when used in conjunction with climate data, is used for determining the IPCC Tier 1 SOC reference levels.
+#The World Resource Base Map of World Soil Resources is available at 1:25 000 000 scale. This is the most general digital map of the World's soils, now using the international standard soil classification WRB. Available as a graphic or digital coverage.
+#Soil Type underpins the processes for estimating the changes in SOC as a result of changes to land use. Soil Type, when used in conjunction with climate data, is used for determining the IPCC Tier 1 SOC reference levels.
 
 # Licence
-FAO encourages the use, reproduction and dissemination of material in this information product. Except where otherwise indicated, material may be copied, downloaded and
-printed for private study, research and teaching purposes, or for use in non-commercial products or services, provided that appropriate acknowledgement of FAO as the source
-and copyright holder is given and that FAO’s endorsement of users’ views, products or services is not implied in any way.
-All requests for translation and adaptation rights, and for resale and other commercial use rights should be
+#FAO encourages the use, reproduction and dissemination of material in this information product. Except where otherwise indicated, material may be copied, downloaded and
+#printed for private study, research and teaching purposes, or for use in non-commercial products or services, provided that appropriate acknowledgement of FAO as the source
+#and copyright holder is given and that FAO’s endorsement of users’ views, products or services is not implied in any way.
+#All requests for translation and adaptation rights, and for resale and other commercial use rights should be
 
 # Attribution
-IUSS Working Group WRB. 2015. World Reference Base for Soil Resources 2014, update 2015. International soil classification system for naming soils and creating legends for soil maps. World Soil Resources Reports No. 106. FAO, Rome.
+#IUSS Working Group WRB. 2015. World Reference Base for Soil Resources 2014, update 2015. International soil classification system for naming soils and creating legends for soil maps. World Soil Resources Reports No. 106. FAO, Rome.
 
-# Coordinate system
-EPSG: 4326 (GCS_WGS_1984)
+# Coordinate system EPSG: 4326 (GCS_WGS_1984)
 
 # Pre-processing: Check Topology - manual in GIS, remove overlaps, fix gaps
 
