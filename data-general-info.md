@@ -26,7 +26,7 @@ All raster datasets have been proessed to tiff/geotiff from original format.\
 Format: .tiff\
 Coordinate System: EPSG 4326 (GCS_WGS_1984)\
 Unit: Degrees\
-Pixel size of 0.00025 decimal degrees\
+Pixel size: no restriction\
 Pixel depth: TBA\
 No Data: TBA
 
