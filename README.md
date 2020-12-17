@@ -13,3 +13,8 @@ The following people are Maintainers Reviewers Ambassadors or Coaches
 **Ambassadors** are available to provide training related to this repository  
 **Coaches** are available to provide information to new contributors to this repository  
 
+## Processed vector datasets
+FLINT ready processed vector data (json) described in this repo can be downloaded from [Land Sector Datasets Google Drive](https://drive.google.com/drive/folders/1HHpzw8ySHv3-SkSw9aIJrJTpAFVIQpaP?usp=sharing)
+
+## Licence information
+Please review individual dataset licence terms and conditions. Please note, while all care has been taken to ensure data is open data available for use, individual datasets will have their own licence conditions and citation requirements.
