@@ -14,7 +14,7 @@ The following people are Maintainers Reviewers Ambassadors or Coaches
 **Coaches** are available to provide information to new contributors to this repository  
 
 ## Processed vector datasets
-FLINT ready processed vector data (json) described in this repo can be downloaded from Moja Global [Land Sector Datasets](https://datasets.mojaglobal.workers.dev/)
+FLINT ready processed vector (json) and raster/grid (tiff) data described in this repo can be downloaded from Moja Global [Land Sector Datasets](https://datasets.mojaglobal.workers.dev/)
 
 ## Licence information
 Please review individual dataset licence terms and conditions. Please note, while all care has been taken to ensure data is open data available for use, individual datasets will have their own licence conditions and citation requirements.
