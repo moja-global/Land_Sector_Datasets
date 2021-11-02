@@ -217,7 +217,7 @@ Within the climate directory the files:
 > The Land ccover directory has four principal subdirectories:
 
 
-### 4.1 Biomass Carbon: The Biomas Carbon is further subdivided into:
+## 4.1 Biomass Carbon: The Biomas Carbon is further subdivided into:
 
 #####4.1.1 Above Ground Live Biomass: 
 This directory conains a zip file( AboveGroundLiveBiomassTiles.zip) with dataset on all living biomass above the soil including stem, stump, branches, bark, seeds and foliage.
