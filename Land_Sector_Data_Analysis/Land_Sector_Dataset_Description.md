@@ -1,6 +1,6 @@
 ### Moja Global's Land Sector Dataset Description
 
-In most files, there is a field called ***geometry***. These fields represents vector geometry is used to represent the spatial component of geographic features with discrete boundaries. 
+In most files, there is a field called **geometry**. These fields represent vector geometry and are used to represent the spatial components of geographic features with discrete boundaries.
 #### DECLARATION: Any field already described in a current section is ignored in the subsequent sections to avoid field description redundancy.
 
 The Land Sector Dataset is divided into five main categories; which are:
