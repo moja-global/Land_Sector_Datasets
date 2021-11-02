@@ -219,23 +219,23 @@ Within the climate directory the files:
 
 ## 4.1 Biomass Carbon: The Biomas Carbon is further subdivided into:
 
-#####4.1.1 Above Ground Live Biomass: 
-This directory conains a zip file( AboveGroundLiveBiomassTiles.zip) with dataset on all living biomass above the soil including stem, stump, branches, bark, seeds and foliage.
+###4.1.1 Above Ground Live Biomass: 
+This directory contains a zip file( AboveGroundLiveBiomassTiles.zip) with a dataset on all living biomass above the soil including stem, stump, branches, bark, seeds, and foliage.
 
-##### 4.1.2 Avitabile Pan Tropical Biomass:
+### 4.1.2 Avitabile Pan Tropical Biomass:
 This directory contains Avitabile's Above ground biomass geotiff and zip files
 
-##### 4.1.3 Geo Carbon Global Forest Biomass Maps: 
-Contains geo carbon geotiff and zip file maps(global forest biomass, above ground biomass, and forest above ground biomass)
+### 4.1.3 Geo Carbon Global Forest Biomass Maps: 
+Contains geo carbon geotiff and zip file maps(global forest biomass, above-ground biomass, and forest above-ground biomass)
 
-##### 4.1.4 Global Biomass
-This directory has 03 global biomass subdirectories containing tiles for above ground biomass, growing stock volums and originals. The file names in these sub directories directly imply the tiles of interest.
+### 4.1.4 Global Biomass
+This directory has 03 global biomass subdirectories containing tiles for above-ground biomass, growing stock volumes, and originals. The file names in these subdirectories directly imply the tiles of interest.
 
 
-### 4.2 Forest
+## 4.2 Forest
 This directory contains subdirectories:
 
-##### 4.2.1 Managed Forest Concessions: 
+### 4.2.1 Managed Forest Concessions: 
 Within this directory there are files containing managed forest concessions of 10 countries including the global geojson file for managed forest concessions. These files have the following properties.
   **id,	OBJECTID,	country,	name,	company,	group_comp,	group_coun,	legal_term,	status,	province,	source,	last_updat,	Shape_Leng,	AREA_GEO,	Shape_Length,	Shape_Area, and	geometry**
 
