@@ -13,7 +13,7 @@ The Land Sector Dataset is divided into five main categories; which are:
 
 
 
-# 1. ADMINISRTATIVE
+## 1. ADMINISRTATIVE
 The administrative directory has three subdirectories as explained below.
 
 
