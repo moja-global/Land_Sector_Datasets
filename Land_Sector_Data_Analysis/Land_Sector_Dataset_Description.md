@@ -239,10 +239,10 @@ This directory contains subdirectories:
 Within this directory there are files containing managed forest concessions of 10 countries including the global geojson file for managed forest concessions. These files have the following properties.
   **id,	OBJECTID,	country,	name,	company,	group_comp,	group_coun,	legal_term,	status,	province,	source,	last_updat,	Shape_Leng,	AREA_GEO,	Shape_Length,	Shape_Area, and	geometry**
 
- ##### 4.2.2 Pan Tropical Forest Strata
-  Contains geotiff files of Pan tropical forest strata for Africa(AFR), South America(SAM) and Southeast Asia(SEA) as well as their relative zip files.
+ ### 4.2.2 Pan Tropical Forest Strata
+  Contains geotiff files of Pantropical forest strata for Africa(AFR), South America(SAM), and Southeast Asia(SEA) as well as their relative zip files.
 
- ##### 4.2.3 Planted forests
+ ### 4.2.3 Planted forests
   This data is from The Spatial Database of Planted Trees(SDPT). It contains data on 43 countries. Each file has the follwing properties:
   	**final_id,	iso,	country,	org_name,	common_name,	species,	species_simp,	plant_ag,	timber_ag,	ever_dec,	conifer_broad,	hard_soft,	size,	source,	year,	geometry**
 
