@@ -249,7 +249,7 @@ This data is from The Spatial Database of Planted Trees(SDPT). It contains data 
 ### 4.2.4 Wood Fiber Concessions
 
 Contains files on the wood fiber concessions of 03 countries and 01 file for the world. The files have the following properties:
-**OBJECTID*1. OBJECTID. group_comp. NAME, type, COUNTRY, area_ha, source, Last_updat, gfwid, Shape_Leng, source_typ, year, FID*, source_t_1, Shape_Le_1,, Shape_Le_2, Shape_Length, Shape_Area, geometry.**
+**OBJECTID\*1. OBJECTID. group_comp. NAME, type, COUNTRY, area_ha, source, Last_updat, gfwid, Shape_Leng, source_typ, year, FID\*, source_t_1, Shape_Le_1,, Shape_Le_2, Shape_Length, Shape_Area, geometry.**
 
 ## 4.3 Forest Loss
 
