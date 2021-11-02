@@ -251,18 +251,18 @@ Contains files on the wood fiber concessions of 03 countries and 01 file for the
 **OBJECTID_1.	OBJECTID.	group_comp.	NAME,	type,	COUNTRY,	area_ha,	source,	Last_updat,	gfwid,	Shape_Leng,	source_typ,	year,	FID_,	source_t_1,	Shape_Le_1,,	Shape_Le_2,	Shape_Length,	Shape_Area,	geometry.**
 
 
-### 4.3 Forest Loss
+## 4.3 Forest Loss
 Forest Loss contains 03  subdirectories:
-##### 4.3.1 Hansen Global Forest Change
+### 4.3.1 Hansen Global Forest Change
 This directory contains 04 principal subdirectories(d**atamask, gain, lossy year and tree cover**). In these directories are geotiff tiles with the names implying the interest
 
-##### 4.3.2 Intact Forest Landscapes
+### 4.3.2 Intact Forest Landscapes
 This directory contains zips and geojson files for Intact forst lanscapes. The notation of the files carry the year of recording.
 
-##### 4.3.3 Terra i Forest Loss
+### 4.3.3 Terra i Forest Loss
 It contains the terra i forest loss data for the country Uganda.
 
-### 4.4 Land Use
+## 4.4 Land Use
 This directory contains Global Food Security-Support Analysis Data. The subdirectories contain tiled files with GFSAD Global Crop Land Crop Extent data. These files notations contain the year as well as the regions of interest which are: Africa( GFSAD30AFCE_2015_resampledTiles), Australia-New_Zealand-China-Mongolia( GFSAD30AUNZCNMOCE_2015_resampledTiles), Europe-Centra_Asia-Russia-Middle_East( GFSAD30EUCEARUMECE_2015_resampledTiles), North America( GFSAD30NACE_2010_resampledTiles), South America( GFSAD30SACE_2015_resampledTiles) and Southeast-and-Northeast Asia( GFSAD30SEACE_2015_resampledTiles).
 
 
