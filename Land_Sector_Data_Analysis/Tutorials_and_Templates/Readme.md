@@ -1,1 +1,1 @@
-# Directroy of Templates for Land Sector Data Analysis
+# Directory of Templates for Land Sector Data Analysis
