@@ -19,7 +19,7 @@ The administrative directory has three subdirectories as explained below.
 
 ### 1.1   Bounderies
 
-> In this directory, there are files containing Political boundaries which are the dividing lines between countries, states, provinces, counties, and cities. These lines, more often called borders, are created by people to separate areas governed by different groups. Sometimes, political boundaries follow  boundaries, but most of the time you can't see them.
+- In this directory, there are files containing political boundaries. These files are the dividing lines between countries, states, provinces, counties, and cities. These lines, often called boundaries, are created by people to separate areas under the jurisdiction of different groups. Sometimes, political boundaries follow boundaries, but most of the time you can't see them.
 
 
 
