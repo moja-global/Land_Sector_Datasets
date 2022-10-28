@@ -147,8 +147,12 @@ This file contains Terrestrial Ecological Regions of the world and has the follo
 4. **REALM**: Biogeographical realm
 5. **BIOME**: Biome
 6. **ECO_NUM**: A unique number of each region within each biome nested within each realm
-7. **ECO_ID** A unique numeric id for each ecoregion
-8. 
+7. **ECO_ID**: A unique numeric id for each ecoregion
+8. **ECO_SYM**: Ecoregion symbol
+9. **GBL_STAT**: Global status
+10. **G200_REGIO**: Global 200 Name
+11. **G200_NUM** Global 200 Number
+12. 
 
 ### 2.1.5 WorldDrylandDataset_2007_UNCCD_CBD_2014.json: empty file
 
