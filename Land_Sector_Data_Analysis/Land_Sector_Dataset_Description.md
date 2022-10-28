@@ -1,6 +1,6 @@
 # Moja Global's Land Sector Dataset Description
 
-In most files, there is a field called **geometry**. This field is vector geometry; the spatial components of geographic features with discrete boundaries.
+In most files, there is a field called <a id = 'gemetry'><b>geometry</b></a>. This field is vector geometry; the spatial components of geographic features with discrete boundaries.
 
 **DECLARATION: Any field already described in a current section is ignored in the subsequent sections to avoid field description redundancy.**
 
@@ -150,10 +150,13 @@ This file contains Terrestrial Ecological Regions of the world and has the follo
 7. **ECO_ID**: A unique numeric id for each ecoregion
 8. **ECO_SYM**: Ecoregion symbol
 9. **GBL_STAT**: Global status
-10. **G200_REGIO**: Global 200 Name
-11. **G200_NUM** Global 200 Number
-12. 
-
+10. **G200_REGIO**: Global 200 Name (The Global 200 is the list of ecoregions identified by the World Wide Fund for Nature (WWF), the global conservation organization, as priorities for conservation.)
+11. **G200_NUM**: Global 200 Number
+12. **G200_BIOME**: Global 200 Biome
+13. **G200_STAT**: Global status
+14. **area_km2**: Area of the ecoregion (km2)
+15. **eco_code**: An alphanumeric code. The first 2 codes are the realm the ecoregion is in. The second 2 codes are the bioe and the last 2 are the ecoregion number.
+16. <a href= 
 ### 2.1.5 WorldDrylandDataset_2007_UNCCD_CBD_2014.json: empty file
 
 There are two subdirectories:
