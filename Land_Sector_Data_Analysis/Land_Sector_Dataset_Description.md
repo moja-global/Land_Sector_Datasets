@@ -41,7 +41,7 @@ The files are made up of twelve (12) important fields: as explained below:
 9.  **wikimedia:** Wikimedia name
 10. **timestamp** the time the data was collected
 11. **adnminlevel:** administrative level 2
-12. **geometry**:<a href = '#geometry'>click  here to know about geometry</a>
+12. **geometry:**
 
 - The notation of files with the general form- **COUNTRY_AL2_country_GEZ.json** (Implying country code followed by administrative level 2, followed by country name; with GEZ: Global Economic Zone). The files have 08 fields. Some of which are:
 
@@ -58,8 +58,7 @@ The files are made up of twelve (12) important fields: as explained below:
 5.  **mg_code:** the soil major group code
 6.  **IPCC:** soil names(The Intergovernmental Panel on Climate Change)
 7.  **adnminlevel:** administrative level
-8.  **geometry**:<a href = '#geometry'>click  here to know about geometry</a>
-
+8.  **geometry:**
 ### 1.1.2 Boundaries Level 4 
 
 Level 4 directory contains the boundaries of each state grouped by country, as well as the boundaries of each state's ecological zone and the boundaries of the world's soil resources. At Level 4:
@@ -81,7 +80,7 @@ Level 4 directory contains the boundaries of each state grouped by country, as w
 5.  **mg_code:** the soil major group code
 6.  **IPCC:** soil names(The Intergovernmental Panel on Climate Change)
 7.  **adnminlevel:** administrative level
-8.  **geometry**:<a href = '#geometry'>click  here to know about geometry</a>
+8.  **geometry:**
 
 - The notation of files with the general form **COUNTRY_AL4_STATE-NAME_GEZ.json**(implying country name followed by administrative level 4, followed by state name; with GEZ: Global Economic Zone). The files have 08 fields. Some of which are:
 
@@ -114,7 +113,7 @@ This file contains global conservation international Biodiversity Hotspots. It h
 3. **Type**: type of hot zone with outer limit or hotspot area
 4. **shape_Length**: represents the length of the polygon
 5. **Shape_Area** represents the area of the polygon
-6. **geometry**:<a href = '#geometry'>click  here to know about geometry</a>
+6. **geometry:**
 
 ### 2.1.2 GlobalCriticalHabitatScreening.tif:
 
@@ -133,7 +132,7 @@ The Holdridge life zones system is a global bioclimatic scheme for the classific
 7. **CASE\_**:
 8. **FREQUENCY**:
 9. **SYMBOL**:
-10. **geometry**:<a href = '#geometry'>click  here to know about geometry</a>
+10. **geometry:**
 
 ### 2.1.4 TerrestrialEcoregionsoftheWorld_WWF.geojson:
 
@@ -156,7 +155,7 @@ This file contains Terrestrial Ecological Regions of the world and has the follo
 13. **G200_STAT**: Global status
 14. **area_km2**: Area of the ecoregion (km2)
 15. **eco_code**: An alphanumeric code. The first 2 codes are the realm the ecoregion is in. The second 2 codes are the bioe and the last 2 are the ecoregion number.
-16. **geometry**:<a href = '#geometry'>click  here to know about geometry</a>
+16. **geometry:**
 
 ### 2.1.5 WorldDrylandDataset_2007_UNCCD_CBD_2014.json: empty file
 
