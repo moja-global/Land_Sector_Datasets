@@ -30,7 +30,7 @@ The directories with Level 2 contain boundaries at the country level including t
 
 The files are made up of twelve (12) important fields: as explained below:
 
-1.  **country:** refers to the name of the country
+1.  <b><a id ='country'>country:</b> refers to the name of the country </a>
 2.  **ISO3166_2:** (ISO standard codes of administrative divisions and subdivisions) In other words - Administrative Divisions of Countries
 3.  **name:** name of the level 2 country
 4.  **enname:** English name of the country
@@ -51,7 +51,7 @@ The files are made up of twelve (12) important fields: as explained below:
 
 - The notation of files with the general form- **COUNTRY_AL2_country_WSR.json**(implying country code followed by administrative level 2, followed by country name; with WSR: World Soil Resources). The files have 08 fields
 
-1.  **country:** refers to the name of the country
+1.   <b><a href ='#country'>country:</b> refers to the name of the country </a>
 2.  **ISO3166_2:** (ISO standard codes of administrative divisions and subdivisions) In other words - Administrative Divisions of Countries
 3.  **name:** name of the level 4 state
 4.  **SNAME:** soil name standard code
@@ -140,6 +140,15 @@ The Holdridge life zones system is a global bioclimatic scheme for the classific
 This file contains Terrestrial Ecological Regions of the world and has the following fields:
 
     OBJECTID_1	OBJECTID	AREA	ECO_NAME	REALM	BIOME	ECO_NUM	ECO_ID	ECO_SYM	GBL_STAT	G200_REGIO	G200_NUM	G200_BIOME	G200_STAT	area_km2	eco_code	BIOME_1	GBL_STAT_1	REALM_1	Shape_Length	Shape_Area	geometry
+   
+1. **OBJECTID**: Internal feature number
+2. **AREA**: Area of each polygon in square km.
+3. **ECO_NAME**: The name of the Terrestial eco region
+4. **REALM**: Biogeographical realm
+5. **BIOME**: Biome
+6. **ECO_NUM**: A unique number of each region within each biome nested within each realm
+7. **ECO_ID** A unique numeric id for each ecoregion
+8. 
 
 ### 2.1.5 WorldDrylandDataset_2007_UNCCD_CBD_2014.json: empty file
 
