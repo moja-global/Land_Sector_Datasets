@@ -1,8 +1,8 @@
 # Moja Global's Land Sector Dataset Description
 
-In most files, there is a field called **geometry**. This field is vector geometry; the spatial components of geographic features with discrete boundaries.
+In most files, there is a field called <a id ='geometry'> </a>**geometry**. This field is vector geometry; the spatial components of geographic features with discrete boundaries.
 
-**DECLARATION: Any field already described in a current section is ignored in the subsequent sections to avoid field description redundancy.**
+**DECLARATION: Any field already described in a current section is ignored in the subsequent sections and linked to the description to avoid field description redundancy.**
 
 There are five main categories of the Land Sector Dataset; which are:
 
@@ -26,76 +26,88 @@ The boundaries are in two levels.
 
 The directories with Level 2 contain boundaries at the country level including the Global Ecological Zone boundaries for each country as well as the World Soil Resources' boundaries:
 
-- The general notation of files is **COUNTRY_AL2_country.json**( implying the country code followed by Administrative Level 2, followed by the country name).
+To avoid field description redundancy, the fields that are common in data of this directory are:
+<a id = 'L2common'> </a>
+1. **country:**  refers to the 3-letter abbreviation code of the country
+2. **ISO3166_2:** (ISO standard codes of administrative divisions and subdivisions)  In   other words - Administrative Divisions of Countries
+3. **name:** name of the level 2 country
+4. **adnminlevel:** administrative level
+5. **geometry:** <a href ='#geometry'>click to see description of the geometry field</a>
+
+- The general notation of files is **COUNTRY_AL2_country.json**( implying the 3-letter country code followed by Administrative Level 2, followed by the country name).
 
 The files are made up of twelve (12) important fields: as explained below:
+1.  **enname:** English name of the country
+2.  **locname:** Local name of the country
+3.  **offname:** official name
+4.  **boundary:** type of boundary
+5.  **wikidata:** Wikidata code
+6.  **wikimedia:** Wikimedia name
+7. **timestamp** the time the data was collected
+ <a href ='#L2common'>click to see description of the other five fields</a>
 
-1.  **country:** refers to the name of the country
-2.  **ISO3166_2:** (ISO standard codes of administrative divisions and subdivisions) In other words - Administrative Divisions of Countries
-3.  **name:** name of the level 2 country
-4.  **enname:** English name of the country
-5.  **locname:** Local name of the country
-6.  **offname:** official name
-7.  **boundary:** type of boundary
-8.  **wikidata:** Wikidata code
-9.  **wikimedia:** Wikimedia name
-10. **timestamp** the time the data was collected
-11. **adnminlevel:** administrative level 2
-12. **geometry**
 
-- The notation of files with the general form- **COUNTRY_AL2_country_GEZ.json** (Implying country code followed by administrative level 2, followed by country name; with GEZ: Global Economic Zone). The files have 08 fields. Some of which are:
+- The notation of files with the general form- **COUNTRY_AL2_country_GEZ.json** (Implying country code followed by administrative level 2, followed by country name; with GEZ: Global Ecological Zone). The files have 08 fields. Some of which are:
+<a id ='gez2'></a>
+1. **gez_name:** Global Ecological Zone name
+2. **gez_code:** Global Ecological Zone standard code
+3. **gez_abbrev:** Global Ecological Zone standard abbreviation
+ <a href ='#L2common'>click to see description of the other five fields</a>
 
-1. **gez_name:** Global Economic Zone name
-2. **gez_code:** Global Economic Zone standard code
-3. **gez_abbrev:** Global Economic Zone standard abbreviation
-
+<a id ='wsr2'></a>
 - The notation of files with the general form- **COUNTRY_AL2_country_WSR.json**(implying country code followed by administrative level 2, followed by country name; with WSR: World Soil Resources). The files have 08 fields
 
-1.  **country:** refers to the name of the country
-2.  **ISO3166_2:** (ISO standard codes of administrative divisions and subdivisions) In other words - Administrative Divisions of Countries
-3.  **name:** name of the level 4 state
-4.  **SNAME:** soil name standard code
-5.  **mg_code:** the soil major group code
-6.  **IPCC:** soil names(The Intergovernmental Panel on Climate Change)
-7.  **adnminlevel:** administrative level
-8.  **geometry**
+1.  **SNAME:** soil name standard code
+2.  **mg_code:** the soil major group code
+3.  **IPCC:** soil names(The Intergovernmental Panel on Climate Change)
+ <a href ='#L2common'>click to see description of the other five fields</a>
 
 ### 1.1.2 Boundaries Level 4 
 
-Level 4 directory contains the boundaries of each state grouped by country, as well as the boundaries of each state's ecological zone and the boundaries of the world's soil resources. At Level 4:
+Level 4 directory contains the boundaries of each state grouped by country, as well as the boundaries of each state's ecological zone and the boundaries of the world's soil resources.
 
-- The general notation of files is **COUNTRY_AL4_STATE-NAME.json**( implying the country name followed by Administrative Level 4, followed by the state name).
-  The files are made up of eight (08) fields( **country, ISO3166_2, name, SNAME, mg_code, IPCC, adminlevel, geometry**)
+To avoid field description redundancy, the fields that are common in data of this directory are:
+<a id = 'L4common'> </a>
+1. **country:**  refers to the 3-letter abbreviation code of the country
+2. **ISO3166_2:** (ISO standard codes of administrative divisions and subdivisions)  In   other words - Administrative Divisions of Countries
+3. **name:** name of the level 4 state
+4. **adnminlevel:** administrative level
+5. **geometry:** <a href ='#geometry'>click to see description of the geometry field</a>
 
-- The notation of files with the general form: **COUNTRY_AL4_STATE-NAME_GEZ.json**(implying country name followed by administrative level 4, followed by state name; with GEZ: Global Economic Zone). The files have 08 fields(**country, ISO3166_2, name, gez_name, gez_code, gez_abbrev, adminlevel geometry**)
-
-- The notation of files with the general form- **COUNTRY_AL4_STATE-NAME_WSR.json**(implying country name followed by administrative level 4, followed by state name; with WSR: World Soil Resources). The files have 08 fields( **country, ISO3166_2, name, SNAME, mg_code, IPCC, adminlevel, geometry**)
 
 - The general notation of files is **COUNTRY_AL4_STATE-NAME.json**( implying the country name followed by Administrative Level 4, followed by the state name).
   The files are made up of eight (08) important fields: as explained below:
 
-1.  **country:** refers to the name of the country
-2.  **ISO3166_2:** (ISO standard codes of administrative divisions and subdivisions) In other words - Administrative Divisions of Countries
-3.  **name:** name of the level 4 state
-4.  **SNAME:** soil name standard code
-5.  **mg_code:** the soil major group code
-6.  **IPCC:** soil names(The Intergovernmental Panel on Climate Change)
-7.  **adnminlevel:** administrative level
-8.  **geometry**
+1.  **enname:** English name of the state
+2.  **locname:** Local name of the state
+3.  **offname:** official name
+4.  **boundary:** type of boundary
+5.  **wikidata:** Wikidata code
+6.  **wikimedia:** Wikimedia name
+7. **timestamp** the time the data was collected
+ <a href ='#L4common'>click to see description of the other five fields</a>
+ 
+- The notation of files with the general form **COUNTRY_AL4_STATE-NAME_GEZ.json**(implying country name followed by administrative level 4, followed by state name; with GEZ: Global Ecological Zone). The files have 08 fields. Which are:
 
-- The notation of files with the general form **COUNTRY_AL4_STATE-NAME_GEZ.json**(implying country name followed by administrative level 4, followed by state name; with GEZ: Global Economic Zone). The files have 08 fields. Some of which are:
+1.  **gez_name:** Global Ecological Zone name
+2.  **gez_code:** Global Ecological Zone standard code
+3.  **gez_abbrev:** Global Ecological Zone standard abbreviation
+ <a href ='#L4common'>click to see description of the other five fields</a>
 
-1.  **gez_name:** Global Economic Zone name
-2.  **gez_code:** Global Economic Zone standard code
-3.  **gez_abbrev:** Global Economic Zone standard abbreviation
+<a id ='wsr4'></a>
+- The notation of files with the general form- **COUNTRY_AL4_STATE-NAME_WSR.json**(implying country name followed by administrative level 4, followed by state name; with WSR: World Soil Resources). The files have 08 fields. Which are:
 
-- The notation of files with the general form- **COUNTRY_AL4_STATE-NAME_WSR.json**(implying country name followed by administrative level 4, followed by state name; with WSR: World Soil Resources). The files have 08 fields( **country, ISO3166_2, name, SNAME, mg_code, IPCC, adminlevel, geometry**)
+1.  **SNAME:** soil name standard code
+2.  **mg_code:** the soil major group code
+3.  **IPCC:** soil names(The Intergovernmental Panel on Climate Change)
+ <a href ='#L4common'>click to see description of the other five fields</a>
+
 
 We also have two files that contain the world's country boundaries and the world's states boundaries respectively.
 
 ## 1.2 Protected Areas
 
-This directory contains the boundary dataset for the **World Database of Protected Areas WDPA** especially data on Other Effective Area-Based Conservation Measures (WDOECM). A detailed description of the files within can be found[ here](http://wdpa.s3.amazonaws.com/WDPA_Manual/English/WDPA_Manual_1_4_EN_FINAL.pdf).
+This directory contains the boundary dataset for the **World Database of Protected Areas WDPA** especially data on Other Effective Area-Based Conservation Measures (WDOECM). A detailed description of the files within can be found [here](http://wdpa.s3.amazonaws.com/WDPA_Manual/English/WDPA_Manual_1_4_EN_FINAL.pdf).
 
 ## 1.3 Roads
 
@@ -114,7 +126,7 @@ This file contains global conservation international Biodiversity Hotspots. It h
 3. **Type**: type of hot zone with outer limit or hotspot area
 4. **shape_Length**: represents the length of the polygon
 5. **Shape_Area** represents the area of the polygon
-6. **geometry**
+6. **geometry:** <a href ='#geometry'>click to see description of the geometry field</a>
 
 ### 2.1.2 GlobalCriticalHabitatScreening.tif:
 
@@ -124,22 +136,40 @@ This screening layer shows the global spatial distribution of likely or potentia
 
 The Holdridge life zones system is a global bioclimatic scheme for the classification of land areas. This file contains:
 
-1. **FID**:
-2. **AREA**:
-3. **PERIMETER**:
+1. **FID**: Index of observed area
+2. **AREA**: Area of each observed area
+3. **PERIMETER**: Perimeter of each observed area
 4. **HOLDRIG\_**:
-5. **HOLDRIG_ID**:
-6. **ZONE**:
+5. **HOLDRIG_ID**: 
+6. **ZONE**: Numeric representation of the unique holdridge life zones
 7. **CASE\_**:
-8. **FREQUENCY**:
+8. **FREQUENCY**: Number of times the holdridge life zones appears in the data
+9. **DESC**: Name of holdridge life zone of the observed area.
 9. **SYMBOL**:
-10. **geometry**:
+10. **geometry:** <a href ='#geometry'>click to see description of the geometry field</a>
 
 ### 2.1.4 TerrestrialEcoregionsoftheWorld_WWF.geojson:
 
 This file contains Terrestrial Ecological Regions of the world and has the following fields:
 
     OBJECTID_1	OBJECTID	AREA	ECO_NAME	REALM	BIOME	ECO_NUM	ECO_ID	ECO_SYM	GBL_STAT	G200_REGIO	G200_NUM	G200_BIOME	G200_STAT	area_km2	eco_code	BIOME_1	GBL_STAT_1	REALM_1	Shape_Length	Shape_Area	geometry
+   
+1. **OBJECTID**: Internal feature number
+2. **AREA**: Area of each polygon in square km.
+3. **ECO_NAME**: The name of the Terrestial eco region
+4. **REALM**: Biogeographical realm
+5. **BIOME**: Biome
+6. **ECO_NUM**: A unique number of each region within each biome nested within each realm
+7. **ECO_ID**: A unique numeric id for each ecoregion
+8. **ECO_SYM**: Ecoregion symbol
+9. **GBL_STAT**: Global status
+10. **G200_REGIO**: Global 200 Name (The Global 200 is the list of ecoregions identified by the World Wide Fund for Nature (WWF), the global conservation organization, as priorities for conservation.)
+11. **G200_NUM**: Global 200 Number
+12. **G200_BIOME**: Global 200 Biome
+13. **G200_STAT**: Global status
+14. **area_km2**: Area of the ecoregion (km2)
+15. **eco_code**: An alphanumeric code. The first 2 codes are the realm the ecoregion is in. The second 2 codes are the bioe and the last 2 are the ecoregion number.
+16. **geometry:** <a href ='#geometry'>click to see description of the geometry field</a>
 
 ### 2.1.5 WorldDrylandDataset_2007_UNCCD_CBD_2014.json: empty file
 
@@ -164,7 +194,7 @@ This directory contains the zipped(compressed) files versions of the GeoTiff and
 
 ## 2.3 Global Ecological Zones
 
-This directory contains a global ecological zone file and 02 subdirectories, which contain JSON files of ecological zones grouped by country and state. The attributes of the file in this section are the same as those of the GEZ file in section 1.1.1.
+This directory contains a global ecological zone file and 02 subdirectories, which contain JSON files of ecological zones grouped by country and state. The attributes of the file in this section are the same as those of the GEZ file in <a href ='#gez2'>section 1.1.1</a>
 
 # 3. Climate
 
@@ -236,6 +266,22 @@ Contains GeoTiff files of Pantropical forest strata for Africa(AFR), South Ameri
 
 This data is from the Spatial Database of Planted Trees(SDPT). It contains data on 43 countries. Each file has the following properties:
 **final_id, iso, country, org_name, common_name, species, species_simp, plant_ag, timber_ag, ever_dec, conifer_broad, hard_soft, size, source, year, geometry**
+1. **final_id**
+2. **iso**: country's alpha-3 code
+3. **country**: country name
+4. **org_name**: 
+5. **common_name**: common name (plural common names) (taxonomy) The name by which an organism or group of organisms is known to the general public, rather than its taxonomic or scientific name.
+6. **species**: 
+7. **species_simp**:
+8. **plant_ag**:
+9. **timber_ag**:
+10. **ever_dec**:
+11. **conifer_broad**:
+12. **hard_soft**:
+13. **size**:
+14. **source**:
+15. **year**:
+16. **geometry**:  <a href ='#geometry'>click to see description of the geometry field</a>
 
 ### 4.2.4 Wood Fiber Concessions
 
@@ -251,6 +297,7 @@ Forest Loss contains three subdirectories:
 This directory contains four principal subdirectories(**datamask, gain, lossy year, and tree cover**). In these directories are GeoTiff tiles with the names implying the interest
 
 ### 4.3.2 Intact Forest Landscapes
+
 
 This directory contains zips and GeoJSON files for Intact forest landscapes. The notation of the files carries the year of recording.
 
@@ -289,20 +336,10 @@ This directory contains 02 subdirectories:
 
 ### 5.3.1 WSR by Country:
 
-Contains files whose notation indicates the country of interest. 
- The files have 08 fields
-
-1.  **country:** refers to the name of the country
-2.  **ISO3166_2:** (ISO standard codes of administrative divisions and subdivisions) In other words - Administrative Divisions of Countries
-3.  **name:** name of the level 4 state
-4.  **SNAME:** soil name standard code
-5.  **mg_code:** the soil major group code
-6.  **IPCC:** soil names(The Intergovernmental Panel on Climate Change)
-7.  **adnminlevel:** administrative level
-8.  **geometry**
+Contains files of countries' soil resources.
+The notation of files with the general form- **COUNTRY_AL2_country_WSR.json**(implying country code followed by administrative level 2, followed by country name; with WSR: World Soil Resources). The files have 08 fields as described in <a href ='#wsr2'>section 1.1.1</a>
 
 ### 5.3.2 WSR by State
 
-Contains files of states' soil resources. 
-The files have 08 fields( **country, ISO3166_2, name, SNAME, mg_code, IPCC, adminlevel, geometry**)
-
+Contains files of states' soil resources.
+- The notation of files with the general form- **COUNTRY_AL4_STATE-NAME_WSR.json**(implying country name followed by administrative level 4, followed by state name; with WSR: World Soil Resources). The files have 08 fields as described in <a href ='#wsr4'>section 1.1.2</a>
