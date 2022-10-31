@@ -1,6 +1,6 @@
 # Moja Global's Land Sector Dataset Description
 
-In most files, there is a field called **geometry**. This field is vector geometry; the spatial components of geographic features with discrete boundaries.
+In most files, there is a field called <a id ='geometry'><b>geometry </b></a>. This field is vector geometry; the spatial components of geographic features with discrete boundaries.
 
 **DECLARATION: Any field already described in a current section is ignored in the subsequent sections to avoid field description redundancy.**
 
@@ -30,7 +30,7 @@ The directories with Level 2 contain boundaries at the country level including t
 
 The files are made up of twelve (12) important fields: as explained below:
 
-1.  **country:** refers to the name of the country
+1.  <b><a id ='country'>country:</b> refers to the name of the country </a>
 2.  **ISO3166_2:** (ISO standard codes of administrative divisions and subdivisions) In other words - Administrative Divisions of Countries
 3.  **name:** name of the level 2 country
 4.  **enname:** English name of the country
@@ -41,7 +41,7 @@ The files are made up of twelve (12) important fields: as explained below:
 9.  **wikimedia:** Wikimedia name
 10. **timestamp** the time the data was collected
 11. **adnminlevel:** administrative level 2
-12. **geometry**
+12. **geometry:**
 
 - The notation of files with the general form- **COUNTRY_AL2_country_GEZ.json** (Implying country code followed by administrative level 2, followed by country name; with GEZ: Global Economic Zone). The files have 08 fields. Some of which are:
 
@@ -51,15 +51,14 @@ The files are made up of twelve (12) important fields: as explained below:
 
 - The notation of files with the general form- **COUNTRY_AL2_country_WSR.json**(implying country code followed by administrative level 2, followed by country name; with WSR: World Soil Resources). The files have 08 fields
 
-1.  **country:** refers to the name of the country
+1.   <b><a href ='#country'>country:</b> refers to the name of the country </a>
 2.  **ISO3166_2:** (ISO standard codes of administrative divisions and subdivisions) In other words - Administrative Divisions of Countries
 3.  **name:** name of the level 4 state
 4.  **SNAME:** soil name standard code
 5.  **mg_code:** the soil major group code
 6.  **IPCC:** soil names(The Intergovernmental Panel on Climate Change)
 7.  **adnminlevel:** administrative level
-8.  **geometry**
-
+8.  **geometry:**
 ### 1.1.2 Boundaries Level 4 
 
 Level 4 directory contains the boundaries of each state grouped by country, as well as the boundaries of each state's ecological zone and the boundaries of the world's soil resources. At Level 4:
@@ -81,7 +80,7 @@ Level 4 directory contains the boundaries of each state grouped by country, as w
 5.  **mg_code:** the soil major group code
 6.  **IPCC:** soil names(The Intergovernmental Panel on Climate Change)
 7.  **adnminlevel:** administrative level
-8.  **geometry**
+8.  **geometry:**
 
 - The notation of files with the general form **COUNTRY_AL4_STATE-NAME_GEZ.json**(implying country name followed by administrative level 4, followed by state name; with GEZ: Global Economic Zone). The files have 08 fields. Some of which are:
 
@@ -114,7 +113,7 @@ This file contains global conservation international Biodiversity Hotspots. It h
 3. **Type**: type of hot zone with outer limit or hotspot area
 4. **shape_Length**: represents the length of the polygon
 5. **Shape_Area** represents the area of the polygon
-6. **geometry**
+6. **geometry:**
 
 ### 2.1.2 GlobalCriticalHabitatScreening.tif:
 
@@ -133,13 +132,30 @@ The Holdridge life zones system is a global bioclimatic scheme for the classific
 7. **CASE\_**:
 8. **FREQUENCY**:
 9. **SYMBOL**:
-10. **geometry**:
+10. **geometry:**
 
 ### 2.1.4 TerrestrialEcoregionsoftheWorld_WWF.geojson:
 
 This file contains Terrestrial Ecological Regions of the world and has the following fields:
 
     OBJECTID_1	OBJECTID	AREA	ECO_NAME	REALM	BIOME	ECO_NUM	ECO_ID	ECO_SYM	GBL_STAT	G200_REGIO	G200_NUM	G200_BIOME	G200_STAT	area_km2	eco_code	BIOME_1	GBL_STAT_1	REALM_1	Shape_Length	Shape_Area	geometry
+   
+1. **OBJECTID**: Internal feature number
+2. **AREA**: Area of each polygon in square km.
+3. **ECO_NAME**: The name of the Terrestial eco region
+4. **REALM**: Biogeographical realm
+5. **BIOME**: Biome
+6. **ECO_NUM**: A unique number of each region within each biome nested within each realm
+7. **ECO_ID**: A unique numeric id for each ecoregion
+8. **ECO_SYM**: Ecoregion symbol
+9. **GBL_STAT**: Global status
+10. **G200_REGIO**: Global 200 Name (The Global 200 is the list of ecoregions identified by the World Wide Fund for Nature (WWF), the global conservation organization, as priorities for conservation.)
+11. **G200_NUM**: Global 200 Number
+12. **G200_BIOME**: Global 200 Biome
+13. **G200_STAT**: Global status
+14. **area_km2**: Area of the ecoregion (km2)
+15. **eco_code**: An alphanumeric code. The first 2 codes are the realm the ecoregion is in. The second 2 codes are the bioe and the last 2 are the ecoregion number.
+16. **geometry:**
 
 ### 2.1.5 WorldDrylandDataset_2007_UNCCD_CBD_2014.json: empty file
 
