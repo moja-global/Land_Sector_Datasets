@@ -45,5 +45,5 @@ jobs:
             git add Data/LandCover/Data/LandCover/GlobalForestManagementData_at_a_100m_resolution.tif.dvc 
             git add Data/LandCover/process.py
             git commit -m "Updated dataset on `date` with GitHub Actions"
-            git push origin main
+            git push origin task-four
             dvc push
