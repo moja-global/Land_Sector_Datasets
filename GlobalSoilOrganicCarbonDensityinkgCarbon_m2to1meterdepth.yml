@@ -1,6 +1,8 @@
- schedule:
-    - cron: '1 * * * *'
-  workflow_dispatch:
+
+
+name: Preprocess data
+
+on: push
   
   
 jobs:
