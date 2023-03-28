@@ -1,0 +1,52 @@
+OpenStreetMap Administrative boundaries
+
+Administrative boundaries level 2 and 4 (country and state boundaries) from OpenStreetMap.
+
+# Processed data access
+Access: https://drive.google.com/drive/folders/1HHpzw8ySHv3-SkSw9aIJrJTpAFVIQpaP?usp=sharing 
+Folder: /World_datasets/Administrative
+
+# Data source
+Full Pbf OpenStreetMap data is accessed via: https://planet.openstreetmap.org/, individual boundaries from http://download.geofabrik.de/ or https://osm-boundaries.com/
+
+# Description
+Within FLINT, Administrative Boundaries are used as a ‘location’ input in the modelling system and help to control where the simulation is conducted. This includes determining the appropriate emission factors to be applied (based on the relevant continent). By incorporating subnational boundaries, it is possible to separate the results by counties or sub-national administrative regions (eg Provinces, regions, districts, states, etc).
+
+# Licence
+OpenStreetMap data is licensed under the Open Data Commons Open Database License (ODbL). For more info: https://www.openstreetmap.org/copyright
+
+# Attribution
+© OpenStreetMap contributors
+
+# Coordinate system
+EPSG: 4326 (GCS_WGS_1984)
+
+# Notes
+OpenStreetMap is open source and is continuely updated. Processed files were extracted and processed in November 2019 thus boundaries are current to then. Changes to country and state boundaries are usually minor in nature.
+
+# Method overview
+To process this data:
+1. download pbf file from selected data source (#data-source)
+2. inspect OSM data correct geometries, administrative levels, tags and names in QGIS, ArcGIS or FME
+3. filter pbf to line and area geometries: filter Place, Boundary tag=administrative geometry=polygon, polyline
+4. run check geometries to find self-intersection and geometry errors, run fix geometry to remove error
+5. apply topological rules to ensure no overlapping boundaries, fix topological errors manually
+6. remove z values if present
+7. transform to geojson, ensure coordiante system EPSG: 4326
+
+# Geoprocessing using ArcPy
+# Import arcpy module
+import arcpy, os
+
+# Local variables:
+input = "C:/folder/osm.shp"
+Output_Coordinate_System = "GEOGCS['GCS_WGS_1984',DATUM['D_WGS_1984',SPHEROID['WGS_1984',6378137.0,298.257223563]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]]"
+output = "C:/folder/gez_2010_wgs84_FeaturesToJSON.geojson"
+
+# Process: Repair Geometry
+arcpy.RepairGeometry_management(input, "DELETE_NULL")
+
+# Process: Features To JSON
+arcpy.env.outputCoordinateSystem = Output Coordinate System
+arcpy.FeaturesToJSON_conversion(input, output, "NOT_FORMATTED", "NO_Z_VALUES", "NO_M_VALUES", "GEOJSON")
+Output_has_Z_Values = "Disabled"
