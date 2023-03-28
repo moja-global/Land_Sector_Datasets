@@ -1,0 +1,2 @@
+['remote "gdrive"']
+    url = gdrive://my_drive/my_project
