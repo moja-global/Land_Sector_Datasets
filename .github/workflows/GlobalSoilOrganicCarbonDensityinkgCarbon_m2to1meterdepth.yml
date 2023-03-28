@@ -1,9 +1,10 @@
 name: Process Soil Data
 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: '1 * * * *'
+  workflow_dispatch:
+
 
 jobs:
   update_soil_data:
@@ -43,3 +44,8 @@ jobs:
           git config --local user.name "GitHub Actions"
           cd Data/Soil
           dvc add GlobalSoilOrganicCarbonDensityinkgCarbon_m2to1meterdepth.tif
+		  git add Data/Soil/GlobalSoilOrganicCarbonDensityinkgCarbon_m2to1meterdepth.tif.dvc 
+          git add Data/Soil/process.py
+          git commit -m "Updated dataset on `date` with GitHub Actions"
+          git push origin task-three
+          dvc push
