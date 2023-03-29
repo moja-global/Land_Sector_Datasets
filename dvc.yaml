@@ -1,20 +1,19 @@
 stages:
   extract:
-    cmd: dvc pull
+    cmd:
+      - python scripts/extract.py
+      - python scripts/rename_files.py
   transform:
     cmd:
       - >-
-        gdalwarp -s_srs EPSG:4326 -t_srs EPSG:4326 \
-            -to SRC_METHOD=NO_GEOTRANSFORM -tr 0.5 0.5 \
-            -r near -te -180.0 -90.0 180.0 90.0 -te_srs EPSG:4326 \
-            -of GTiff Data/Soil/soilcarbon.ovr \
-            Data/Soil/GlobalSoilOrganicCarbonDensityinkgCm_1mDepth.tif
+        python scripts/transform.py --input tmp_unzip_path/data/commonData_Data0_soilcarbon.ovr \
+            --output Data/Soil/processed/GlobalSoilOrganicCarbonDensityinkgCm_1mDepth.tif
     deps:
-    - Data/Soil/soilcarbon.ovr
+    - tmp_unzip_path/data/commonData_Data0_soilcarbon.ovr
     outs:
-    - Data/Soil/GlobalSoilOrganicCarbonDensityinkgCm_1mDepth.tif
+    - Data/Soil/processed/GlobalSoilOrganicCarbonDensityinkgCm_1mDepth.tif
   load:
     cmd:
-      - mkdir Data/Soil/processed
-      - cp Data/Soil/GlobalSoilOrganicCarbonDensityinkgCm_1mDepth.tif Data/Soil/processed/
-      - rm -f Data/Soil/GlobalSoilOrganicCarbonDensityinkgCm_1mDepth.tif
+      - dvc push
+  clean:
+    cmd: rm -rf tmp_unzip_path
