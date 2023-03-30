@@ -1,0 +1,7 @@
+stages:
+  process:
+    cmd: python process.py
+    deps:
+      - path: data/GlobalSoilOrganicCarbonDensitykgCm2to1mdepth.ipynb
+    outs:
+      - path: data/GlobalSoilOrganicCarbonDensitykgCm2to1mdepth_processed.csv
