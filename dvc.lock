@@ -1,0 +1,11 @@
+schema: '2.0'
+stages:
+  clean:
+    cmd: rm -rf tmp_unzip_path
+  extract:
+    cmd:
+    - dvc pull
+    - python scripts/extract.py
+  transform:
+    cmd:
+    - python scripts/transform.py
