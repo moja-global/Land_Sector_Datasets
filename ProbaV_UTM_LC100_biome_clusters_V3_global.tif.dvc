@@ -1,0 +1,4 @@
+outs:
+- md5: d845c3c867e5210ca4f1bcb7449d9d08
+  size: 200695
+  path: ProbaV_UTM_LC100_biome_clusters_V3_global.tif
