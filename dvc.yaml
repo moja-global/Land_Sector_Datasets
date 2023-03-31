@@ -2,19 +2,20 @@ stages:
   extract:
     cmd:
       - dvc pull
-      - python scripts/extract.py
+      - python scripts/extract.py --url https://zenodo.org/record/5848610/files/biome_cluster_shapefile.zip?download=1
     deps:
       - scripts/extract.py
-    outs:
-      - tmp_unzip_path
   transform:
     cmd:
       - python scripts/transform.py
     deps:
+      - tmp_unzip_path
       - scripts/transform.py
-    outs:
-      - ProbaV_UTM_LC100_biome_clusters_V3_global.tif
-
+  load:
+    cmd:
+      - dvc push
+    deps:
+      - tmp_unzip_path/biome_cluster_shapefile
 
 
 
