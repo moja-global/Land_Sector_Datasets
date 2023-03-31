@@ -2,3 +2,5 @@
     remote = storage
 ['remote "storage"']
     url = gdrive://1xqxnKzJJiPty7ZIBsZdxTJIfHY1FUTFA
+    gdrive_use_service_account = true
+    gdrive_service_account_json_file_path = ../moja-global-381209-18734abcf5d3.json
