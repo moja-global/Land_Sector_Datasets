@@ -11,6 +11,7 @@ stages:
     - Data/Soil/transformed_file.tif
   load:
     cmd:
+      -mkdir Data/Soil/Transformed
       - cp Data/Soil/transformed_file.tif Data/Soil/Transformed/
       - rm -f Data/Soil/transformed_file.tif
     deps:
