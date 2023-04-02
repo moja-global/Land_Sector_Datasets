@@ -1,0 +1,43 @@
+name: process-json-file
+
+on:
+  # Run the workflow every day at 6:00am UTC
+  schedule:
+    - cron: "0 6 * * *"
+
+jobs:
+  process-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code from the repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Install Python
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      # Install dependencies
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Run the Python script to process the JSON file
+      - name: Process JSON file
+        run: python data.py
+
+      # Commit changes to the repository
+      - name: Commit changes
+        run: |
+          git config --global user.name "Your Name"
+          git config --global user.email "youremail@example.com"
+          git add processed_data.json
+          git commit -m "Process data"
+      
+      # Push changes to the remote repository
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.5.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
