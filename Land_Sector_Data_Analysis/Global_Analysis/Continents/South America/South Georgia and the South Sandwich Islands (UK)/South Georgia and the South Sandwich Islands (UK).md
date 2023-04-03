@@ -1,1 +1,0 @@
-Add South Georgia and the South Sandwich Islands (UK)'s Land Sector Data Analysis

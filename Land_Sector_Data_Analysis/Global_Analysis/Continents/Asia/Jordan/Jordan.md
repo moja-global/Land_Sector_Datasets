@@ -1,1 +1,0 @@
-Add Jordan's Land Sector Data Analysis

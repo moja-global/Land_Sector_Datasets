@@ -1,1 +1,0 @@
-Add Navassa Island (USA)'s Land Sector Data Analysis
