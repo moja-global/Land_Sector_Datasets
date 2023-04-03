@@ -1,0 +1,1 @@
+Add Clipperton Island (France)'s Land Sector Data Analysis
