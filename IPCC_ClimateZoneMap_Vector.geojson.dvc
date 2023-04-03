@@ -1,0 +1,4 @@
+outs:
+- md5: 6f436ab4aa7ce7219a1603b4fa83687c
+  size: 13400448
+  path: IPCC_ClimateZoneMap_Vector.geojson
