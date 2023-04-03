@@ -1,0 +1,51 @@
+IPCC Climate Zone Map
+
+Description:
+The Climatic Zone layer is defined based on the classification of IPCC (IPCC, 2006). The zones are defined by a set of rules based on:
+
+- Annual mean daily temperature,
+- Total annual precipitation,
+- Total annual potential evapo-transpiration (PET) and elevation.
+The classification presented as Figure 3A.5.1 Classification scheme for default climate regions” (IPCC, 2006) could not be accessed in electronic form and generated from an independently developed set of base data layers. Climatic information on temperature and precipitation was provided by the 5 arc min. dataset Version 1.4 from the WorldClim project (Hijmans et al., 2005). PET was computed according to the temperature-based formula investigated by Oudin et al. (2005) and used by Kay & Davis (2008). The computation of the extraterrestrial radiation was based on Duffie & Beckman (1991) and Allen et al. (1994). The formulas were supplemented by the information provided by the “Solar Radiation Basis” Web-page of the University of Oregon: http://solardat.uoregon.edu/SolarRadiationBasics.html.
+
+FLINT
+This dataset has been checked/pre-processed and is suitable for use in FLINT. Please adhere to individual dataset licence conditions and citations. Processed data can be accessed here: Land Sector Datasets https://datasets.mojaglobal.workers.dev/
+
+Format
+Extent: Global coverage
+Resolution: Raster 0.05-degree resolution (this can be resampled to any resolution)
+File type: geotiff (.tif) and geojson (.json)
+Cordinate system: EPSG:4326 (WGS84)
+Year: 2006
+Size: 24MB
+
+Original source:
+Downloaded from: https://esdac.jrc.ec.europa.eu/projects/RenewableEnergy/ Accessed 20/12/2020.
+Raster .rst 0.0833333333333333 degree pixels
+
+Licence:
+Creative Commons Attribution 4.0 International License
+
+Citation:
+Intergovernmental Panel on Climate Change, (IPCC), (2006)., 2006 IPCC Guidelines for National Greenhouse Gas Inventories Volume 4: Agriculture, Forestry and Other Land Use. Available at: https://www.ipcc-nggip.iges.or.jp/public/2006gl/vol4.html
+
+Metadata:
+More information: https://esdac.jrc.ec.europa.eu/projects/RenewableEnergy/ Value Class_name
+1 Warm Temperate Moist
+2 Warm Temperate Dry
+3 Cool Temperate Moist
+4 Cool Temperate Dry
+5 Polar Moist
+6 Polar Dry
+7 Boreal Moist
+8 Boreal Dry
+9 Tropical Montane
+
+Processing:
+Dataset converted to tiff, projection WGS84, and converted to vector (note Value and Class_name table above to matach codes. Code is provided below.
+
+# Convert from .rst to tif and apply WGS84 and resample to 0.005
+gdalwarp -t_srs EPSG:4326 -dstnodata 255.0 -tr 0.05 0.05 -r near -te -180.0 -90.0 180.0 90.0 -te_srs EPSG:4326 -of GTiff "C:/Data/CLIMATE_ZONE.rst" "C:/Data/IPCC_ClimateZoneMap.tif"
+
+# Convert to polygon
+python3 -m gdal_polygonize C:/Data/tiff/IPCC_ClimateZoneMap.tif C:/Data/tiff/IPCC_ClimateZoneMap.geojson -b 1 -f "GeoJSON" IPCC_ClimateZoneMap CLASS_NAME        
