@@ -1,0 +1,4 @@
+outs:
+- md5: df3a97f5530dcf3603068ac149a1c2b3
+  size: 3235410
+  path: NGA_ALL_states.json
