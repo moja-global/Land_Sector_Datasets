@@ -47,6 +47,7 @@ jobs:
             git add Data/Soil/process.py
             git commit -m "Updated dataset on `date` with GitHub Actions"
             git config pull.rebase true
+            git pull
             git push origin master
             dvc pull
             dvc push
