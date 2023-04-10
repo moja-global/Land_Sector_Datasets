@@ -45,7 +45,7 @@ jobs:
             git add Data/EcoRegion/GlobalCriticalHabitatScreening1.tif.dvc
             git add Data/EcoRegion/process.py
             git commit -m "Updated dataset on `date` with GitHub Actions"
-            git pull
+            git config pull.rebase true
             git push origin master
             dvc pull
             dvc push
