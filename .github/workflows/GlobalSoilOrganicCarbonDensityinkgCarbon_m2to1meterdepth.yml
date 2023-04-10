@@ -1,7 +1,7 @@
 name: Capture and Preprocess data
 on:
   schedule:
-    - cron: '* 3 * * *'
+    - cron: '* 6 * * *'
   workflow_dispatch:
   
   
