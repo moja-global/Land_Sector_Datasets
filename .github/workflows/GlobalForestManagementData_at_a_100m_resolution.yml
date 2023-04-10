@@ -46,6 +46,6 @@ jobs:
             git add Data/LandCover/process.py
             git commit -m "Updated dataset on `date` with GitHub Actions"
             git pull
-            git push origin task-four-moja
+            git push origin master
             dvc pull
             dvc push
