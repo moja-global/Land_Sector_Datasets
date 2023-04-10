@@ -1,7 +1,7 @@
 name: Capture and Preprocess data
 on:
   schedule:
-    - cron: '1 * * * *'
+    - cron: '* 3 * * *'
   workflow_dispatch:
   
   
@@ -33,7 +33,7 @@ jobs:
            run: |
             cd Data/Soil/
             pip install wget
-            curl --user-agent --auth-no-challenge --user-agent imajinarts14:junior$$14 "https://databasin2-filestore.s3.amazonaws.com/a4cb6d367eae4e52a08902874f8bfedf/download/a4cb6d367eae4e52a08902874f8bfedf_1_zip_en.zip?Signature=Lfnb%2BDMItoFMm9pmB96%2BC%2BndV%2F8%3D&Expires=1681117538&AWSAccessKeyId=AKIAI4RK5BEPK3FCQPUQ" --output "Global Soil Organic Carbon Density in kg Carbon_m2 to 1 meter depth.zip"
+            curl --user-agent --auth-no-challenge --user-agent imajinarts14:junior$$14 "https://databasin2-filestore.s3.amazonaws.com/a4cb6d367eae4e52a08902874f8bfedf/download/a4cb6d367eae4e52a08902874f8bfedf_1_zip_en.zip?Signature=oce9pPSaV8z3MSKw3026wSk2Asw%3D&Expires=1681124246&AWSAccessKeyId=AKIAI4RK5BEPK3FCQPUQ" --output "Global Soil Organic Carbon Density in kg Carbon_m2 to 1 meter depth.zip"
             python process.py
             gdalwarp -to SRC_METHOD=NO_GEOTRANSFORM -s_srs EPSG:4326 -t_srs EPSG:4326 -tr 0.5 0.5 -r near -te -180.0 -90.0 180.0 90.0 -te_srs EPSG:4326 -of GTiff "data/commonData\Data0\soilcarbon.ovr" GlobalSoilOrganicCarbonDensityinkgCarbon_m2to1meterdepth.tif
          - name: Commit and Push Changes
