@@ -1,0 +1,51 @@
+name: Capture and Preprocess data
+on:
+  schedule:
+    - cron: '1 * * * *'
+  workflow_dispatch:
+  
+  
+jobs:
+  update_data:
+    name: Update Data from source
+    runs-on: windows-latest
+    steps:
+         - name: Checkout
+           uses: actions/checkout@v2
+         - name: Setup Python
+           uses: actions/setup-python@v2
+           with:
+             python-version: '3.8'
+             cache: 'pip'
+         - name: Install Dependencies
+           run: |
+            choco install gdal
+            choco install gdal-core
+            setx CPLUS_INCLUDE_PATH "C:\Program Files\GDAL\include"
+            setx C_INCLUDE_PATH "C:\Program Files\GDAL\include"
+            pip install wheel
+            pip install numpy
+            pip install GDAL==$(gdal-config --version | awk -F'[.]' '{print $1"."$2}') --global-option=build_ext --global-option="-I\"C:\Program Files\GDAL\include\""
+            pip install ipython
+            pip install dvc[gdrive]
+         - name: Run Script
+           run: |
+            cd Data/Climate/
+            pip install wget
+            python process.py
+            gdalwarp -s_srs EPSG:4326 -t_srs EPSG:4326 -dstnodata 255.0 -tr 0.05 0.05 -r near -te -180.0 -90.0 180.0 90.0 -te_srs EPSG:4326 -of GTiff "CLIMATE_ZONE.rst" "IPCC_ClimateZoneMap.tif"
+         - name: Commit and Push Changes
+           env:
+            GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
+           run: |
+            git config --local user.email "actions@github.com"
+            git config --local user.name "GitHub Actions"
+            dvc add Data/Climate/IPCC_ClimateZoneMap.tif
+            git add Data/Climate/IPCC_ClimateZoneMap.tif.dvc 
+            git add Data/Climate/process.py
+            git commit -m "Updated dataset on `date` with GitHub Actions"
+            git config pull.rebase true
+            git pull
+            git push origin master
+            dvc pull
+            dvc push
