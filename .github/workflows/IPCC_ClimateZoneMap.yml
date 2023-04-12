@@ -25,7 +25,7 @@ jobs:
             setx C_INCLUDE_PATH "C:\Program Files\GDAL\include\gdal"
             pip install wheel
             pip install numpy
-            pip install GDAL==$(gdal-config --version | awk -F'[.]' '{print $1"."$2}') --global-option=build_ext --global-option="-I\"C:\Program Files\GDAL\include\gdal"
+            pip install GDAL==$(gdal-config --version | awk -F'[.]' '{print $1"."$2}') --global-option=build_ext --global-option="-I\"C:\Program Files\GDAL\include\gdal""
             pip install ipython
             pip install dvc[gdrive]
          - name: Run Script
