@@ -8,7 +8,7 @@ on:
 jobs:
   update_data:
     name: Update Data from source
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
          - name: Checkout
            uses: actions/checkout@v2
@@ -19,13 +19,14 @@ jobs:
              cache: 'pip'
          - name: Install Dependencies
            run: |
-            conda install -c conda-forge gdal
-            conda install -c conda-forge libgdal-arrow-parquet
-            setx CPLUS_INCLUDE_PATH "C:\Program Files\GDAL\include\gdal"
-            setx C_INCLUDE_PATH "C:\Program Files\GDAL\include\gdal"
+            sudo add-apt-repository ppa:ubuntugis/ppa && sudo apt-get update
+            sudo apt-get install gdal-bin
+            sudo apt-get install libgdal-dev
+            export CPLUS_INCLUDE_PATH=/usr/include/gdal
+            export C_INCLUDE_PATH=/usr/include/gdal
             pip install wheel
             pip install numpy
-            pip install GDAL==$(gdal-config --version | awk -F'[.]' '{print $1"."$2}') --global-option=build_ext --global-option="-I\"C:\Program Files\GDAL\include\gdal""
+            sudo pip3 install GDAL==$(gdal-config --version | awk -F'[.]' '{print $1"."$2}') --global-option=build_ext --global-option="-I/usr/include/gdal"
             pip install ipython
             pip install dvc[gdrive]
          - name: Run Script
