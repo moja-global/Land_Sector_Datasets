@@ -19,8 +19,8 @@ jobs:
              cache: 'pip'
          - name: Install Dependencies
            run: |
-            choco install gdal
-            choco install gdal-core
+            conda install -c conda-forge gdal
+            conda install -c conda-forge libgdal-arrow-parquet
             setx CPLUS_INCLUDE_PATH "C:\Program Files\GDAL\include\gdal"
             setx C_INCLUDE_PATH "C:\Program Files\GDAL\include\gdal"
             pip install wheel
