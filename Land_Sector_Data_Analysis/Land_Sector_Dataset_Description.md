@@ -18,7 +18,7 @@ The administrative directory has three subdirectories as explained below.
 
 ## 1.1 Boundaries
 
-In this directory, files are containing political boundaries. These documents are the dividing lines between countries, states, provinces, counties, and cities. People create these lines, usually called boundaries, to separate areas under the jurisdiction of different groups. Sometimes, political boundaries follow boundaries, but most of the time you can’t see them.
+In this directory, there are files containing political boundaries. These documents are the dividing lines between countries, states, provinces, counties, and cities. People create these lines, usually called boundaries, to separate areas under the jurisdiction of different groups. Sometimes, political boundaries follow boundaries, but most of the time you can’t see them.
 
 The boundaries are in two levels.
 
@@ -40,7 +40,7 @@ The files are made up of twelve (12) important fields: as explained below:
 8.  **wikidata:** Wikidata code
 9.  **wikimedia:** Wikimedia name
 10. **timestamp** the time the data was collected
-11. **adnminlevel:** administrative level 2
+11. **adminlevel:** administrative level 2
 12. **geometry:**
 
 - The notation of files with the general form- **COUNTRY_AL2_country_GEZ.json** (Implying country code followed by administrative level 2, followed by country name; with GEZ: Global Economic Zone). The files have 08 fields. Some of which are:
@@ -57,7 +57,7 @@ The files are made up of twelve (12) important fields: as explained below:
 4.  **SNAME:** soil name standard code
 5.  **mg_code:** the soil major group code
 6.  **IPCC:** soil names(The Intergovernmental Panel on Climate Change)
-7.  **adnminlevel:** administrative level
+7.  **adminlevel:** administrative level
 8.  **geometry:**
 ### 1.1.2 Boundaries Level 4 
 
@@ -79,7 +79,7 @@ Level 4 directory contains the boundaries of each state grouped by country, as w
 4.  **SNAME:** soil name standard code
 5.  **mg_code:** the soil major group code
 6.  **IPCC:** soil names(The Intergovernmental Panel on Climate Change)
-7.  **adnminlevel:** administrative level
+7.  **adminlevel:** administrative level
 8.  **geometry:**
 
 - The notation of files with the general form **COUNTRY_AL4_STATE-NAME_GEZ.json**(implying country name followed by administrative level 4, followed by state name; with GEZ: Global Economic Zone). The files have 08 fields. Some of which are:
@@ -154,7 +154,7 @@ This file contains Terrestrial Ecological Regions of the world and has the follo
 12. **G200_BIOME**: Global 200 Biome
 13. **G200_STAT**: Global status
 14. **area_km2**: Area of the ecoregion (km2)
-15. **eco_code**: An alphanumeric code. The first 2 codes are the realm the ecoregion is in. The second 2 codes are the bioe and the last 2 are the ecoregion number.
+15. **eco_code**: An alphanumeric code. The first 2 codes are the realm the ecoregion is in. The second 2 codes are the biome and the last 2 are the ecoregion number.
 16. **geometry:**
 
 ### 2.1.5 WorldDrylandDataset_2007_UNCCD_CBD_2014.json: empty file
@@ -164,7 +164,7 @@ There are two subdirectories:
 ## 2.2 Global AgroEcological Zones:
 
 This directory contains 12 GeoTiff files with various Land Resources(cultivated, domestic land cover, forest land), Protected areas(restricted agro areas, types), Soil resources(dominant soils, nutrient availability, rain-fed terrain suitability, rooting conditions), Terrain slope index and Water scarcity. files
-and 3 subdirectories. The 03 subdirectories:
+and 3 subdirectories. The 03 subdirectories are:
 
 ### 2.2.1 Agro Climate
 
@@ -264,7 +264,7 @@ Forest Loss contains three subdirectories:
 
 ### 4.3.1 Hansen Global Forest Change
 
-This directory contains four principal subdirectories(**datamask, gain, lossy year, and tree cover**). In these directories are GeoTiff tiles with the names implying the interest
+This directory contains four principal subdirectories(**datamask, gain, lossy year, and tree cover**). In these directories are GeoTiff tiles with the names implying the interest.
 
 ### 4.3.2 Intact Forest Landscapes
 
@@ -314,7 +314,7 @@ Contains files whose notation indicates the country of interest.
 4.  **SNAME:** soil name standard code
 5.  **mg_code:** the soil major group code
 6.  **IPCC:** soil names(The Intergovernmental Panel on Climate Change)
-7.  **adnminlevel:** administrative level
+7.  **adminlevel:** administrative level
 8.  **geometry**
 
 ### 5.3.2 WSR by State
