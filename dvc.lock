@@ -1,0 +1,40 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd:
+    - "gdalwarp -s_srs EPSG:4326 -t_srs EPSG:4326 \\\n    -to SRC_METHOD=NO_GEOTRANSFORM\
+      \ -tr 0.5 0.5 \\\n    -r near -te -180.0 -90.0 180.0 90.0 -te_srs EPSG:4326\
+      \ \\\n    -of GTiff Data/Soil/soilcarbon.ovr \\\n    Data/Soil/prepared/GlobalSoilOrganicCarbonDensityinkgCm_1mDepth.tif"
+    deps:
+    - path: Data/Soil/soilcarbon.ovr
+      md5: 33956e4dd24c1caa1dcea956e85e1f5f
+      size: 131473
+    outs:
+    - path: Data/Soil/prepared/GlobalSoilOrganicCarbonDensityinkgCm_1mDepth.tif
+      md5: 96f78155b79a835f56d019586d4c1f14
+      size: 1038282
+  transform:
+    cmd:
+    - "python scripts/transform.py --input tmp_unzip_path/data/commonData_Data0_soilcarbon.ovr\
+      \ \\\n    --output Data/Soil/processed/GlobalSoilOrganicCarbonDensityinkgCm_1mDepth.tif"
+    deps:
+    - path: tmp_unzip_path/data/commonData_Data0_soilcarbon.ovr
+      md5: 33956e4dd24c1caa1dcea956e85e1f5f
+      size: 131473
+    outs:
+    - path: Data/Soil/processed/GlobalSoilOrganicCarbonDensityinkgCm_1mDepth.tif
+      md5: 96f78155b79a835f56d019586d4c1f14
+      size: 1038282
+  Load:
+    cmd:
+    - cp Data/Soil/GlobalSoilOrganicCarbonDensityinkgCm_1mDepth.tif Data/Soil/processed/
+    - rm -f Data/Soil/GlobalSoilOrganicCarbonDensityinkgCm_1mDepth.tif
+  extract:
+    cmd:
+    - python scripts/extract.py
+    - python scripts/rename_files.py
+  load:
+    cmd:
+    - dvc push
+  clean:
+    cmd: rm -rf tmp_unzip_path
