@@ -1,0 +1,5 @@
+cmd: jupyter nbconvert --to notebook --execute GlobalSoilOrganicCarbonDensitykgCm2to1mdepth.ipynb
+deps:
+  - data/GlobalSoilOrganicCarbonDensitykgCm2to1mdepth.csv
+outs:
+  - GlobalSoilOrganicCarbonDensitykgCm2to1mdepth_processed.csv
