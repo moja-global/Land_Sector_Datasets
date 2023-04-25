@@ -1,0 +1,31 @@
+schema: '2.0'
+stages:
+  clean:
+    cmd: rm -rf tmp_unzip_path
+  extract:
+    cmd:
+    - dvc pull
+    - python scripts/extract.py --url https://zenodo.org/record/5848610/files/biome_cluster_shapefile.zip?download=1
+    deps:
+    - path: scripts/extract.py
+      md5: d830ef0dbfdf852086fdadc71c09b79d
+      size: 866
+  transform:
+    cmd:
+    - python scripts/transform.py
+    deps:
+    - path: scripts/transform.py
+      md5: 970803f50e773433cc3b5332de572bdf
+      size: 1872
+    - path: tmp_unzip_path
+      md5: 0bad863a229679b7c6715bb869e7dbef.dir
+      size: 43367177
+      nfiles: 8
+  load:
+    cmd:
+    - dvc push
+    deps:
+    - path: tmp_unzip_path/biome_cluster_shapefile
+      md5: 55b51427163151378b68f034d49fbf9c.dir
+      size: 43367177
+      nfiles: 8
