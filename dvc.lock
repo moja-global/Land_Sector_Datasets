@@ -1,0 +1,17 @@
+schema: '2.0'
+stages:
+  extract:
+    cmd: echo "No extraction needed for tif file in Data/Soil"
+  transform:
+    cmd:
+    - gdalwarp -s_srs EPSG:4326 -t_srs EPSG:4326 -to SRC_METHOD=NO_GEOTRANSFORM -tr
+      0.5 0.5 -r near -te -180.0 -90.0 180.0 90.0 -te_srs EPSG:4326 -of GTiff Data/Soil/GlobalSoilOrganicCarbonDensityinkgCm_1mDepth.tif
+      Data/Soil/transformed_file.tif
+    deps:
+    - path: Data/Soil/GlobalSoilOrganicCarbonDensityinkgCm_1mDepth.tif
+      md5: cf9794c1d61bb6eeacaa10dfa5954931
+      size: 1038378
+    outs:
+    - path: Data/Soil/transformed_file.tif
+      md5: 2ec4f2db772d40135fb4abdc92e534dc
+      size: 1038378

@@ -1,0 +1,12 @@
+stages:
+  load_data:
+    cmd: python load.py
+    outs:
+      - Data/loaded_data.pkl
+
+  process_data:
+    cmd: python process.py
+    deps:
+      - Data/loaded_data.pkl
+    outs:
+      - Data/processed_data.csv
