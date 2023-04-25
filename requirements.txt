@@ -1,0 +1,8 @@
+gdal-utils==3.5.0.0
+jsonschema==4.3.3
+jupyter==1.0.0
+jupyter-client==5.3.5
+jupyter-console==5.2.0
+jupyter-core==4.10.0
+jupyterlab-pygments==0.2.2
+jupyterlab-widgets==1.1.0

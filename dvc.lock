@@ -1,0 +1,23 @@
+schema: '2.0'
+stages:
+  clean:
+    cmd: rm -rf tmp_unzip_path
+  load:
+    cmd:
+    - dvc push
+  extract:
+    cmd:
+    - python scripts/extract.py
+    - python scripts/rename_files.py
+  transform:
+    cmd:
+    - "python scripts/transform.py --input tmp_unzip_path/data/commonData_Data0_soilcarbon.ovr\
+      \ \\\n    --output Data/Soil/processed/GlobalSoilOrganicCarbonDensityinkgCm_1mDepth.tif"
+    deps:
+    - path: tmp_unzip_path/data/commonData_Data0_soilcarbon.ovr
+      md5: 33956e4dd24c1caa1dcea956e85e1f5f
+      size: 131473
+    outs:
+    - path: Data/Soil/processed/GlobalSoilOrganicCarbonDensityinkgCm_1mDepth.tif
+      md5: 96f78155b79a835f56d019586d4c1f14
+      size: 1038282
