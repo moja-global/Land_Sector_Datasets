@@ -1,0 +1,71 @@
+name: Capture and Preprocess data
+on:
+  schedule:
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+
+jobs:
+  update_data:
+    name: Update Data from source
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+          cache: 'pip'
+
+      - name: Download ArcGIS Desktop
+        run: |
+          # Download ArcGIS Desktop installer
+          wget -q -O ArcGIS_Desktop_Installer.exe https://gisupdates.esri.com/ArcGIS/ArcGISforAutoCAD400_2.exe
+          # Replace "link" with the actual URL to download ArcGIS Desktop installer
+
+      - name: Install ArcGIS Desktop
+        run: |
+          # Install ArcGIS Desktop
+          ArcGIS_Desktop_Installer.exe /s /norestart
+
+      - name: Install Dependencies
+        run: |
+          pip install wheel
+          pip install numpy
+          pip install ipython
+          pip install dvc[gdrive]
+
+      - name: Set up arcpy Environment
+        run: |
+          # Set up the environment variables required for arcpy
+          setx -m PYTHONPATH "%PYTHONPATH%;C:\Python27\ArcGIS\Desktop10.X\arcpy"
+          setx -m PATH "%PATH%;C:\Python27\ArcGIS\Desktop10.X"
+
+      - name: Run Script
+        run: |
+          cd Data/Climate/
+          pip install wget
+          python process.py
+          arcpy.env.workspace = "C:\Data\climate\"  # Replace with the correct path to the workspace
+          arcpy.env.overwriteOutput = True  # Allow overwriting output files
+          arcpy.CheckOutExtension("Spatial")  # Check out the required extension
+
+          # Run arcpy geoprocessing tasks
+          arcpy.GDALWarp_conversion("CLIMATE_ZONE.rst", "IPCC_ClimateZoneMap.tif", "", "", "", "", "", "", "", "")
+
+      - name: Commit and Push Changes
+        env:
+          GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          dvc add Data/Climate/IPCC_ClimateZoneMap.tif
+          git add Data/Climate/IPCC_ClimateZoneMap.tif.dvc
+          git add Data/Climate/process.py
+          git commit -m "Updated dataset on `date` with GitHub Actions"
+          git config pull.rebase true
+          git pull
+          git push origin master
+          dvc pull
+          dvc push
