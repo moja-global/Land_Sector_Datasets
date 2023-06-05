@@ -1,0 +1,49 @@
+name: Capture and Preprocess data
+on:
+  schedule:
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+
+
+jobs:
+  update_data:
+    name: Update Data from source
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+          cache: 'C:\Python3.8\Scripts\pip.exe'
+      - name: Install Dependencies
+        run: |
+          pip install wheel
+          pip install numpy
+          pip install ipython
+          pip install dvc[gdrive]
+      - name: Install ArcGIS
+        run: |
+          Invoke-WebRequest -Uri 'https://gisupdates.esri.com/ArcGIS/ArcGISforAutoCAD400_2.exe' -OutFile 'ArcGISforAutoCAD400_2.exe'
+          Start-Process -Wait -FilePath 'ArcGISforAutoCAD400_2.exe' -ArgumentList '/qn /quiet /norestart'
+      - name: Run Script
+        run: |
+          cd Data/Climate/
+          python -m pip install wget
+          python preprocess.py
+      - name: Commit and Push Changes
+        env:
+          GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          dvc add Data/Climate/IPCC_ClimateZoneMap.tif
+          git add Data/Climate/IPCC_ClimateZoneMap.tif.dvc 
+          git add Data/Climate/preprocess.py
+          git commit -m "Updated dataset on $(date) with GitHub Actions"
+          git config pull.rebase true
+          git pull
+          git push origin master
+          dvc pull
+          dvc push
