@@ -22,6 +22,10 @@ jobs:
           pip install numpy
           pip install ipython
           pip install dvc[gdrive]
+      - name: Install ArcGIS
+        run: |
+          Invoke-WebRequest -Uri 'https://fs18.softfamous.com/downloads/tname-230223dld024/software/ArcGIS_Desktop_1022_es_140418.exe' -OutFile 'ArcGIS_Desktop_1022_es_140418.exe'
+          Start-Process -Wait -FilePath 'ArcGIS_Desktop_1022_es_140418.exe' -ArgumentList '/qn /quiet /norestart'
       - name: Run Script
         run: |
           cd Data/EcoRegion/
