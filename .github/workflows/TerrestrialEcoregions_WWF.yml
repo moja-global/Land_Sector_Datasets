@@ -29,7 +29,7 @@ jobs:
           Start-Process -Wait -FilePath 'ArcGISforAutoCAD400_2.exe' -ArgumentList '/qn /quiet /norestart'
       - name: Run Script
         run: |
-          cd Data/Climate/
+          cd Data/EcoRegion/
           python -m pip install wget
           python preprocess.py
       - name: Commit and Push Changes
