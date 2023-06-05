@@ -22,10 +22,6 @@ jobs:
           pip install numpy
           pip install ipython
           pip install dvc[gdrive]
-      - name: Install ArcGIS
-        run: |
-          Invoke-WebRequest -Uri 'https://gisupdates.esri.com/ArcGIS/ArcGISforAutoCAD400_2.exe' -OutFile 'ArcGISforAutoCAD400_2.exe'
-          Start-Process -Wait -FilePath 'ArcGISforAutoCAD400_2.exe' -ArgumentList '/qn /quiet /norestart'
       - name: Run Script
         run: |
           cd Data/EcoRegion/
