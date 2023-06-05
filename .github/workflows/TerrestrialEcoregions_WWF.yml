@@ -1,7 +1,7 @@
 name: Capture and Preprocess data
 on:
   schedule:
-    - cron: '0 */4 * * *'
+    - cron: '1 * * * *'
   workflow_dispatch:
 
 
@@ -24,8 +24,8 @@ jobs:
           pip install dvc[gdrive]
       - name: Install ArcGIS
         run: |
-          Invoke-WebRequest -Uri 'https://fs18.softfamous.com/downloads/tname-230223dld024/software/ArcGIS_Desktop_1022_es_140418.exe' -OutFile 'ArcGIS_Desktop_1022_es_140418.exe'
-          Start-Process -Wait -FilePath 'ArcGIS_Desktop_1022_es_140418.exe' -ArgumentList '/qn /quiet /norestart'
+          curl "https://fs18.softfamous.com/downloads/tname-230223dld024/software/ArcGIS_Desktop_1022_es_140418.exe" -Output "ArcGIS_Desktop_1022_es_140418.exe"
+          ./ArcGIS_Desktop_1022_es_140418.exe /qb
       - name: Run Script
         run: |
           cd Data/EcoRegion/
