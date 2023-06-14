@@ -1,7 +1,7 @@
 name: Capture and Preprocess data
 on:
   schedule:
-    - cron: '0 */4 * * *'
+    - cron: '1 * * * *'
   workflow_dispatch:
   
   
@@ -29,23 +29,21 @@ jobs:
             sudo pip3 install GDAL==$(gdal-config --version | awk -F'[.]' '{print $1"."$2}') --global-option=build_ext --global-option="-I/usr/include/gdal"
             pip install ipython
             pip install dvc[gdrive]
-         - name: Print Environment Variables
-           run: env
          - name: Run Script
            run: |
-            cd Data/EcoRegion/
+            cd Data/Administrative/
             pip install wget
             python process.py
-            gdalwarp -co COMPRESS=DEFLATE -co PREDICTOR=2 -co ZLEVEL=9 -t_srs EPSG:4326 -tr 0.01 0.01 -r near -te -180.0 -90.0 180.0 90.0 -te_srs EPSG:4326 -of GTiff GlobalCriticalHabitatScreening.tif GlobalCriticalHabitatScreening1.tif
+            gdalwarp -co COMPRESS=DEFLATE -co PREDICTOR=2 -co ZLEVEL=9 -t_srs EPSG:4326 -tr 0.01 0.01 -r near -te -180.0 -90.0 180.0 90.0 -te_srs EPSG:4326 -of GTiff FML_v3-2_with-colorbar.tif GlobalForestManagementData_at_a_100m_resolution.tif
          - name: Commit and Push Changes
            env:
             GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
            run: |
             git config --local user.email "actions@github.com"
             git config --local user.name "GitHub Actions"
-            dvc add Data/EcoRegion/GlobalCriticalHabitatScreening1.tif
-            git add Data/EcoRegion/GlobalCriticalHabitatScreening1.tif.dvc
-            git add Data/EcoRegion/process.py
+            dvc add Data/LandCover/GlobalForestManagementData_at_a_100m_resolution.tif
+            git add Data/LandCover/GlobalForestManagementData_at_a_100m_resolution.tif.dvc 
+            git add Data/LandCover/process.py
             git commit -m "Updated dataset on `date` with GitHub Actions"
             git config pull.rebase true
             git pull

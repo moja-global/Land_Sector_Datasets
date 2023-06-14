@@ -1,7 +1,7 @@
 name: Capture and Preprocess data
 on:
   schedule:
-    - cron: '0 */4 * * *'
+    - cron: '1 * * * *'
   workflow_dispatch:
   
   
@@ -31,20 +31,19 @@ jobs:
             pip install dvc[gdrive]
          - name: Run Script
            run: |
-            cd Data/Soil/
+            cd Data/LandCover/
             pip install wget
-            curl --user-agent --auth-no-challenge --user-agent imajinarts14:junior$$14 "https://databasin2-filestore.s3.amazonaws.com/a4cb6d367eae4e52a08902874f8bfedf/download/a4cb6d367eae4e52a08902874f8bfedf_1_zip_en.zip?Signature=yb%2B3sN3O12gmyiOdxUnyXr2FWeU%3D&Expires=1682125323&AWSAccessKeyId=AKIAI4RK5BEPK3FCQPUQ" --output "Global Soil Organic Carbon Density in kg Carbon_m2 to 1 meter depth.zip"
             python process.py
-            gdalwarp -to SRC_METHOD=NO_GEOTRANSFORM -s_srs EPSG:4326 -t_srs EPSG:4326 -tr 0.5 0.5 -r near -te -180.0 -90.0 180.0 90.0 -te_srs EPSG:4326 -of GTiff "data/commonData\Data0\soilcarbon.ovr" GlobalSoilOrganicCarbonDensityinkgCarbon_m2to1meterdepth.tif
+            gdalwarp -co COMPRESS=DEFLATE -co PREDICTOR=2 -co ZLEVEL=9 -t_srs EPSG:4326 -tr 0.01 0.01 -r near -te -180.0 -90.0 180.0 90.0 -te_srs EPSG:4326 -of GTiff FML_v3-2_with-colorbar.tif GlobalForestManagementData_at_a_100m_resolution.tif
          - name: Commit and Push Changes
            env:
             GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
            run: |
             git config --local user.email "actions@github.com"
             git config --local user.name "GitHub Actions"
-            dvc add Data/Soil/GlobalSoilOrganicCarbonDensityinkgCarbon_m2to1meterdepth.tif
-            git add Data/Soil/GlobalSoilOrganicCarbonDensityinkgCarbon_m2to1meterdepth.tif.dvc 
-            git add Data/Soil/process.py
+            dvc add Data/LandCover/GlobalForestManagementData_at_a_100m_resolution.tif
+            git add Data/LandCover/GlobalForestManagementData_at_a_100m_resolution.tif.dvc 
+            git add Data/LandCover/process.py
             git commit -m "Updated dataset on `date` with GitHub Actions"
             git config pull.rebase true
             git pull

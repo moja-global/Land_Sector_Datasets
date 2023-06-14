@@ -23,8 +23,8 @@ gdal_polygonize_cmd = 'python3 -m gdal_polygonize IPCC_ClimateZoneMap.tif IPCC_C
 os.system(gdal_polygonize_cmd)
 
 # Check Topology - Run fix geometries in QGIS
-qgis_cmd = 'qgis --nologo --code "import processing\n\nparams = {\'INPUT\': \'IPCC_ClimateZoneMap.geojson\', \'OUTPUT\': \'Fixed_ClimateZoneMap.geojson\'}\nprocessing.run(\'native:fixgeometries\', params)"'
-os.system(qgis_cmd)
+#qgis_cmd = 'qgis --nologo --code "import processing\n\nparams = {\'INPUT\': \'IPCC_ClimateZoneMap.geojson\', \'OUTPUT\': \'Fixed_ClimateZoneMap.geojson\'}\nprocessing.run(\'native:fixgeometries\', params)"'
+#os.system(qgis_cmd)
 
 # Update the "process.py" file with a timestamp
 a_file = open("process.py", "r")

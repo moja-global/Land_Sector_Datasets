@@ -1,7 +1,7 @@
 name: Capture and Preprocess data
 on:
   schedule:
-    - cron: '0 */4 * * *'
+    - cron: '1 * * * *'
   workflow_dispatch:
   
   
@@ -27,31 +27,28 @@ jobs:
             pip install wheel
             pip install numpy
             sudo pip3 install GDAL==$(gdal-config --version | awk -F'[.]' '{print $1"."$2}') --global-option=build_ext --global-option="-I/usr/include/gdal"
-            sudo apt-get install qgis
             pip install ipython
             pip install dvc[gdrive]
+         - name: Print Environment Variables
+           run: env
          - name: Run Script
            run: |
-            cd Data/Climate/
+            cd Data/EcoRegion/
             pip install wget
             python process.py
+            gdalwarp -co COMPRESS=DEFLATE -co PREDICTOR=2 -co ZLEVEL=9 -t_srs EPSG:4326 -tr 0.01 0.01 -r near -te -180.0 -90.0 180.0 90.0 -te_srs EPSG:4326 -of GTiff GlobalCriticalHabitatScreening.tif GlobalCriticalHabitatScreening1.tif
          - name: Commit and Push Changes
            env:
             GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
            run: |
             git config --local user.email "actions@github.com"
             git config --local user.name "GitHub Actions"
-            dvc add Data/Climate/IPCC_ClimateZoneMap.tif
-            git add Data/Climate/IPCC_ClimateZoneMap.tif.dvc
-            dvc add Data/Climate/IPCC_ClimateZoneMap.geojson
-            git add Data/Climate/IPCC_ClimateZoneMap.geojson.dvc
-            git add Data/Climate/process.py
-            git add Data/Climate/curate.py
+            dvc add Data/EcoRegion/GlobalCriticalHabitatScreening1.tif
+            git add Data/EcoRegion/GlobalCriticalHabitatScreening1.tif.dvc
+            git add Data/EcoRegion/process.py
             git commit -m "Updated dataset on `date` with GitHub Actions"
             git config pull.rebase true
             git pull
             git push origin master
             dvc pull
             dvc push
-            cd Data/Climate/
-            python curate.py
