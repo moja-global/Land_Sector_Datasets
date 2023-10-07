@@ -14,7 +14,7 @@ The following people are Maintainers Reviewers Ambassadors or Coaches
 **Coaches** are available to provide information to new contributors to this repository  
 
 ## Processed datasets
-FLINT ready processed vector (json) and raster/grid (tiff) data described in this repo can be downloaded from Moja Global [Land Sector Datasets](https://datasets.mojaglobal.workers.dev/) data library.
+FLINT ready processed vector (json) and raster/grid (tiff) data described in this repo can be downloaded from Moja Global [Land Sector Datasets](https://drive.google.com/drive/folders/1PZCVksHsuNyPzB9QTyraBSs1C7_c7W56?usp=sharing) data library.
 
 ### Formats
 To be FLINT ready, vector datasets must be in geoJSON vector format, with no overlapping parts or topological error such as self intersections. Code is provided to systematically process the original data sources into this format, but please note this may change the content of the data e.g. where there are two overlapping polygons with different attribution, one will arbitrarily win over the other. We have also attempted to clean up small gaps and slithers systematically, but it is still recommended that manual checking and editing is completed depending on your project requirements.
