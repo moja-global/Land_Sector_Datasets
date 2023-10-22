@@ -25,5 +25,6 @@ Preserving biodiversity is essential for a sustainable future! 🌱
 - Sample Data Source: [Insert Data Source Link]
 - GeoPandas Documentation: [GeoPandas Docs](https://geopandas.org/en/stable/)
 - Matplotlib Documentation: [Matplotlib Docs](https://matplotlib.org/stable/contents.html)
+- Sustainable Development Goals [(SDG)](https://www.undp.org/sustainable-development-goals#:~:text=The%20Sustainable%20Development%20Goals%20(SDGs)%2C%20also%20known%20as%20the,people%20enjoy%20peace%20and%20prosperity.)
 
 Feel free to explore and contribute to this prototype. Happy mapping! 🌟
