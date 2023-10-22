@@ -51,3 +51,5 @@ This document outlines the Sustainable Development Goal (SDG) mapping prototypes
 
 ---
 
+### references
+SDGs - https://sdgs.un.org/goals
