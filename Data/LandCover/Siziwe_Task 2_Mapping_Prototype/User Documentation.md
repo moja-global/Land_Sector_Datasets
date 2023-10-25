@@ -1,30 +1,65 @@
-# 🌍 Biodiversity Hotspots Mapping to SDGs Prototype 🌿
+# 🌍 Land Sector Management and Data Analysis Project
 
-## Introduction
-Welcome to the Biodiversity Hotspots Mapping Prototype! This project demonstrates how to map and analyze biodiversity hotspots in South Africa to align them with Sustainable Development Goals (SDGs).
+## User Documentation
 
-## 📂 Project Structure
-- `code/`: Python code for geospatial visualization.
-- `data/`: Sample data (https://drive.google.com/file/d/1_mfGM-9gE6p10vPwePnjRNBgp8ysA0dy/view?usp=sharing).
-- `README.md`: You are here!
+Welcome to the Land Sector Management and Data Analysis project! This user documentation will guide you through the various tasks and help you understand how to contribute effectively to the project.
 
-## 🚀 Getting Started
-1. Clone the repository to your local machine.
-2. Ensure you have Python and necessary libraries (GeoPandas, Matplotlib) installed.
-3. Replace the sample data in the `data/` folder with your dataset.
+### Table of Contents
+1. [Task 1 - Exploratory Data Analysis (EDA)](#task-1-exploratory-data-analysis-eda)
+2. [Task 2 - Attribute-SDG Mapping Prototype](#task-2-attribute-sdg-mapping-prototype)
+3. [Task 3 - Geospatial Analysis](#task-3-geospatial-analysis)
+4. [Task 4 - Visualization Prototype](#task-4-visualization-prototype)
+5. [Task 5 - User Documentation](#task-5-user-documentation)
 
-## 🔍 Prototype Sections
-- `Mapping to SDGs`: How we align hotspot attributes with SDGs.
-- `Python Code for Visualization`: Geospatial visualization using Python.
-- `Conservation Impact`: Learn about the importance of preserving these hotspots.
+### Task 1 - Exploratory Data Analysis (EDA)
 
-## 🌿 Conservation Matters
-Preserving biodiversity is essential for a sustainable future! 🌱
+🚀 **Description**: The Land sector dataset repository brings together datasets useful for land sector management. Your task is to perform an Exploratory Data Analysis (EDA) on a specific location of your choice.
 
-## 🌐 Resources
-- Sample Data Source: [Insert Data Source Link]
-- GeoPandas Documentation: [GeoPandas Docs](https://geopandas.org/en/stable/)
-- Matplotlib Documentation: [Matplotlib Docs](https://matplotlib.org/stable/contents.html)
-- Sustainable Development Goals [(SDG)](https://www.undp.org/sustainable-development-goals#:~:text=The%20Sustainable%20Development%20Goals%20(SDGs)%2C%20also%20known%20as%20the,people%20enjoy%20peace%20and%20prosperity.)
+- 🌐 **Select a Location**: Choose a country, region, province, state, or city (preferably your local environment).
 
-Feel free to explore and contribute to this prototype. Happy mapping! 🌟
+- 📂 **Navigate Data Library**: Access the data library to find relevant data corresponding to your selected area.
+
+- 📊 **Data Analysis**: Create a Jupyter Notebook in your repository and conduct data analysis on the data you found. Use graphs, plots, dataframes, etc., to provide visualizations and interpretations of the data.
+
+- 📝 **Commit and Share**: Sign off commits, push your work, raise a pull request, and share the link in the #outreachy channel of the Slack community.
+
+### Task 2 - Attribute-SDG Mapping Prototype
+
+🚀 **Description**: In this task, you will work with the Land sector repository to map specific attributes from a chosen dataset to relevant Sustainable Development Goals (SDGs).
+
+- 📦 **Fork and Clone**: Fork and clone the Land sector repository to your computer.
+
+- 📂 **Select Dataset**: Navigate the data library and select a dataset of your choice. Associate the dataset with its metafile in the cloned repository.
+
+- 🎯 **SDG Mapping**: Choose two relevant SDGs identified in the research task. Develop a prototype for mapping specific attributes from the dataset to these SDGs.
+
+- 📝 **Commit and Share**: Sign off commits, push your work, raise a pull request, and share the link in the #outreachy channel of the Slack community. Exclude the data file from the commit.
+
+### Task 3 - Geospatial Analysis
+
+🚀 **Description**: If the dataset contains spatial information, perform geospatial analysis to identify patterns or trends.
+
+- 🗺️ **Geospatial Analysis**: Use GeoPandas and other geospatial libraries in Python to perform geospatial analysis. Provide visualizations (maps) and a brief report on any spatial patterns or correlations discovered.
+
+- 📝 **Commit and Share**: Sign off commits, push your work, raise a pull request, and share the link in the #outreachy channel of the Slack community. Exclude the data file from the commit.
+
+### Task 4 - Visualization Prototype
+
+🚀 **Description**: Develop a prototype for the data visualization component. Create visualizations that represent the mapped relationships between land attributes and SDGs.
+
+- 📊 **Create Visualizations**: Develop Python code for creating visualizations that illustrate the relationships between land attributes and SDGs.
+
+- 📝 **Commit and Share**: Sign off commits, push your work, raise a pull request, and share the link in the #outreachy channel of the Slack community. Exclude the data file from the commit.
+
+### Task 5 - User Documentation
+
+🚀 **Description**: Begin drafting user documentation to help users understand how to interpret integrated data and use the visualization tool.
+
+- 📄 **User Documentation**: Draft user documentation focusing on the basics of interpreting the integrated data and using the visualization tool.
+
+- 📝 **Commit and Share**: Sign off commits, push your work, raise a pull request, and share the link in the #outreachy channel of the Slack community.
+
+---
+
+**Note**: Make sure to customize your contributions for each task as specified and follow the guidelines and requirements provided in the tasks.
+
