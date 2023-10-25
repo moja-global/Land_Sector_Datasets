@@ -16,7 +16,7 @@ Welcome to the Land Sector Management and Data Analysis project! This user docum
 
 ### Task 1 - Exploratory Data Analysis (EDA)
 
-🚀 **Description**: The Land sector dataset repository brings together datasets useful for land sector management. Your task is to perform an Exploratory Data Analysis (EDA) on a specific location of your choice.
+**Description**: The Land sector dataset repository brings together datasets useful for land sector management. Your task is to perform an Exploratory Data Analysis (EDA) on a specific location of your choice.
 
 - 🌐 **Select a Location**: Choose a country, region, province, state, or city (preferably your local environment).
 
