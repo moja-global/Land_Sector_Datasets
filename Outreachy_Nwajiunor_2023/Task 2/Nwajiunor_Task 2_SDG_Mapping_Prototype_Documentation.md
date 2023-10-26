@@ -18,11 +18,11 @@ Goal 11: Sustainable Cities and Communities. It is about making cities and human
 
 #### Mapping Explanation:
 
-- `Mapped_SDGs`: Is the column that results from mapping. It associates each soil type(resources) with its relevant SDG. In other words, the mapping helps identify which specific SDG(s) are relevant to different soil types, with most of them being associated with SDG 15: Life on Land. However, some entries are not mapped to any SDG, indicating that they might not have a direct association with the two relevant SDGs identified for this task. The number of world soil types that were mapped to SDG 15 were 32 in number while only one world soil resource was not mapped.
+- `Mapped_SDGs`: Is the column that results from mapping. It associates each soil type(resources) with its relevant SDG. In other words, the mapping helps identify which specific SDG(s) are relevant to different soil types, with most of them being associated with SDG 15: Life on Land. However, some entries are not mapped to any SDG, indicating that they might not have a direct association with the two relevant SDGs identified for this task. The number of world soil types that were mapped to SDG 15 were 31 in number while only two world soil resources were not mapped.
 
 SDG 15: Life on Land: This SDG is associated with various soil types listed in the world soil resources dataset. It suggests that these soil types are directly related to SDG 15, which focuses on protecting, restoring, and promoting the sustainable use of terrestrial ecosystems found on the earth's surface.
 
-Not Mapped: This category is for entries that do not directly correspond to either of the aforementioned SDG. They are not explicitly linked to either of the SDG goals relevant to the task because they are "waterbodies" category which is not a soil type. It refers to bodies of water such as rivers, lakes, and ponds, which are not soil resources but rather aquatic features.
+Not Mapped: This category is for entries that do not directly correspond to either of the aforementioned SDG. They are not explicitly associated with the SDG goals relevant to the task due to their classification as "waterbodies" or "glaciers." These categories, "waterbodies" and "glaciers," do not pertain to soil types. "Waterbodies" encompass features like rivers, lakes, and ponds, which are aquatic in nature and not classified as soil resources. On the other hand, "glaciers" refer to slow-moving bodies of ice, including ice sheets that cover large land areas. While both "waterbodies" and "glaciers" are significant in their own right, they are not categorized as soil resources, yet they play essential roles in the Earth's ecosystem.
 
 ### World Protected Areas
 
