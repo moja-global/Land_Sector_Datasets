@@ -6,11 +6,11 @@ The following report provides a comprehensive overview of the spatial analysis c
 
 ### Protected Areas Mapping Issue
 
-One of the key components of the analysis focused on mapping protected areas around the world. However, during the process, a critical issue arose, primarily related to the geometry of the dataset. This geometry issue was primarily due to problems with the spatial components that define the shape and location of each protected area, known as geometries. The geometry column included a large number of invalid `geometries`. This prevented the successful creation of a map for the protected areas dataset. Such issues can arise due to data entry errors, inconsistencies in spatial representations, or other data quality problems.
+One of the key components of the analysis focused on mapping protected areas around the world. However, during the process, a critical issue arose, primarily related to the geometry of the dataset. This geometry issue was primarily due to problems with the spatial components that define the shape and location of each protected area, known as geometries. The `geometry` column included a large number of invalid geometries. This prevented the successful creation of a map for the protected areas dataset. Such issues can arise due to data entry errors, inconsistencies in spatial representations, or other data quality problems.
 
 ### Key Findings and Insights
 
-Despite this challenge, the analysis provided several noteworthy findings and insights. High Activity Clay Soils (HAC) emerged as prominent soil resources, with distinctive relevance. These soils, characterized by their 2:1 silicate clay mineral dominance, were mapped as a "combination" under both the ecosystem type and major ecosystem services categories.
+Despite this challenge, the analysis provided several noteworthy findings and insights. High Activity Clay Soils (HAC) emerged as prominent soil resources, with distinctive relevance. These soils, characterized by their 2:1 silicate clay mineral dominance, were uniquely mapped as a "combination" under both the `ecosystem_type` and `major_ecosystem_service` columns due to their diverse soil resource composition.
 
 A comprehensive overview of protected areas indicated that the dataset comprises 188,413 globally recognized designations. Interestingly, a substantial proportion of these areas lack reported ownership structures, while two contested protected areas are identified. These discoveries underline the need for comprehensive reporting and improved management of protected areas.
 
