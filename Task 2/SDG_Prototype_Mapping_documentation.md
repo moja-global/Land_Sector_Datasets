@@ -80,12 +80,10 @@ The 'STATUS' attribute in the protected area dataset provides information about 
 The Designated, Established and the Inscribed status indicates that the area has been officially designated for protection. This SDG 11 aligns with the goal of ensuring sustainable urbanisation and safe, inclusive, and resilient cities and communities. 
 
 
-#### Reference
+#### Reference 
 
 
 [Sustainable Development Goal](https://www.fao.org/3/CA3121EN/ca3121en.pdf)
-
-
 
 
 
