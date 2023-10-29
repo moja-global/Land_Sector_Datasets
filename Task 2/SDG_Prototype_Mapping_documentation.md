@@ -77,7 +77,7 @@ The protected area dataset columns includes: WDPAID, WDPA_PID, PA_DEF, NAME, ORI
 The 'STATUS' attribute in the protected area dataset provides information about the status of various protected areas or sites of cultural or natural significance. Mapping this attribute to SDG 11, focuses on Sustainable Cities and Communities.
 
 
-The Designated, Established and the Inscribed status indicates that the area has been officially designated for protection. This SDG 11 aligns with the goal of ensuring sustainable urbanisation and safe, inclusive, and resilient cities and communities. 
+The Designated, Established and the Inscribed status indicates that the area has been officially designated for protection. This SDG 11 aligns with the goal of ensuring sustainable urbanisation and safe, inclusive, resilient cities and communities. 
 
 
 #### Reference 
