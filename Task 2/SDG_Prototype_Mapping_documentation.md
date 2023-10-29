@@ -61,7 +61,7 @@ The SDG No 13 aims at making efforts to reduce greenhouse gas emissions, enhance
 ### PROTECTED AREA DATASET
 
 
-#### Data Attributes
+#### Data Attributes:
 
 
 The protected area dataset columns includes: WDPAID, WDPA_PID, PA_DEF, NAME, ORIG_NAME, DESIG, DESIG_ENG, DESIG_TYPE, IUCN_CAT, INT_CRIT, MARINE,REP_M_AREA, GIS_M_AREA, REP_AREA, GIS_AREA, NO_TAKE,NO_TK_AREA, STATUS, STATUS_YR, GOV_TYPE, OWN_TYPE,MANG_AUTH, MANG_PLAN, VERIF, METADATAID, SUB_LOC,PARENT_ISO, ISO3, SUPP_INFO, CONS_OBJ, geometry.
