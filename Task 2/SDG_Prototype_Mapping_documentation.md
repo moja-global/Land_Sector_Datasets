@@ -5,7 +5,7 @@
 This is the prototype for mapping the Sustainable Development Goals (SDG) in the administrative dataset.
 
 
-The two selected of Sustainable Development in alignment with the administrative dataset category are No 11 and No 13
+The Sustainable Development Goal in alignment with the administrative dataset category that was chosen are No 11 and No 13
 
 
 #### Goal 11:
