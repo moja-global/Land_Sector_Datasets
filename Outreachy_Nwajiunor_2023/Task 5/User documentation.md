@@ -30,14 +30,14 @@ b. You will also need a performant desktop machine or laptop with a minimum stor
 - Land Cover
 - Soil 
 
-### SDGs Alignment/Mapping
+### 2. SDGs Alignment/Mapping
 Datasets are matched with relevant SDGs to identify goals related to land sector data, including land use, environmental impact, and social implications.
 
-### Geospatial Analysis
+### 3. Geospatial Analysis
 
 Focused on global patterns, specifically examining the interplay between soil types, ecosystem services, protected areas, and road networks on a global scale. These insights have the potential to inform diverse domains, encompassing environmental management, infrastructure planning, and ecological research.
 
-### Data Visualization
+### 4. Data Visualization
 
 The visualization tools provide valuable insights into the alignment between various datasets and the Sustainable Development Goals (SDGs). Here's how you can effectively use these tools:
 
@@ -49,7 +49,7 @@ Identifying Spatial Overlaps: The red areas on the map represent the intersectio
 
 Gaining Insights: Users can draw meaningful insights from the visual representations, such as understanding the alignment of road types with specific SDGs. This information can be valuable for research, decision-making, and policy development.
 
-### Results
+### 5. Results
 - The clear mapping of soil resources to SDG 15 underscores the significance of these resources in achieving the SDG's objectives, particularly related to terrestrial ecosystem conservation.
 
 - The alignment of road types with SDG 11 emphasizes the role of infrastructure in creating sustainable and resilient urban environments.
@@ -60,7 +60,7 @@ Gaining Insights: Users can draw meaningful insights from the visual representat
 
 - The majority of mapped entries (51,686) aligned with SDG 15, highlighting a strong focus on the conservation and sustainable management of terrestrial ecosystems within the "Protected Areas" dataset.
 
-### FAQs
+### 6. FAQs
 
 Q1. Who can use this documentation?
 
@@ -97,6 +97,6 @@ A. Yes, you can select specific attributes within the datasets to analyze and vi
 
 **Contact Information:** For all inquiries, feedback, or technical support, the support team is readily available to assist you. Please feel free to contact via info@moja.global
 
-### Conclusion
+### 7. Conclusion
 
 This document is a complete guide for understanding integrated land sector data and how to use visualization tools. It helps users in land management, conservation, and following global SDG goals. With the provided data, tools, and interactive prototype, users can make well-informed decisions in land management and sustainable development, all aligned with the SDGs.
