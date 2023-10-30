@@ -14,7 +14,7 @@ Goal 11: Sustainable Cities and Communities. It is about making cities and human
 
 #### Dataset Attribute:
 
-- `IPCC`: IPCC stands for Intergovernmental Panel on Climate Change. The soil names are classified based on the IPCC classificication.
+- `IPCC`: IPCC stands for Intergovernmental Panel on Climate Change. The soil names are classified based on the IPCC classification.
 
 #### Mapping Explanation:
 
@@ -31,11 +31,11 @@ SDG 15: Life on Land: This SDG is associated with various soil types listed in t
 
 #### Mapping Explanation:
 
-- `Mapped_SDGs`: This column associates each ownership type with its relevant SDG. This mapping helps in identifying which SDGs are being addressed by various protected areas, providing insights into the contributions of these areas to global sustainability goals.  Some entries (ownership type) are not mapped to any SDG, indicating that they might not have a direct link with the two relevant SDGs identified for this task, some others were mapped to SDG 11: Sustainable Cities and Communities and the rest were mapped to SDG 15: Life on Land. The number of entereries that were not mapped were 188415 and those that were mapped to SDG 15 were 51686. Only 64 were mapped to SDG 11.
+- `Mapped_SDGs`: This column associates each ownership type with its relevant SDG. This mapping helps in identifying which SDGs are being addressed by various protected areas, providing insights into the contributions of these areas to global sustainability goals.  Some entries (ownership type) are not mapped to any SDG, indicating that they might not have a direct link with the two relevant SDGs identified for this task, some others were mapped to SDG 11: Sustainable Cities and Communities and the rest were mapped to SDG 15: Life on Land. The number of enteries that were not mapped were 188415 and those that were mapped to SDG 15 were 51686. Only 64 were mapped to SDG 11.
 
 SDG 11: Sustainable Cities and Communities: This SDG is associated with the "for-profit organisations" ownership type as their involvement could influence urban development in cities and communities. 
 
-SDG 15: Life on Land: This SDG is associated with the "Non-profit organisations", "Individual landowners", "Multiple ownership", "Communual", and "Joint ownership" categories. These ownnership types have impact on the protect areas for biodiversity conservation, land protection and management of natural areas.
+SDG 15: Life on Land: This SDG is associated with the "Non-profit organisations", "Individual landowners", "Multiple ownership", "Communal", and "Joint ownership" categories. These ownnership types have impact on the protect areas for biodiversity conservation, land protection and management of natural areas.
 
 Not Mapped: This indicates that these protected areas did not fit the criteria for direct mapping to either of the relevant SDG for this task. Ownership types that fall under this is the "Not Reported" and "Contested" categories. It is challenging to link the "Not Reported" category to the relevant SDG without more information, as well as the "Contested" category because nature of the disputes and their implications for land conservation cannot be ascertained.
 
