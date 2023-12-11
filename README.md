@@ -23,3 +23,35 @@ To be FLINT ready, rasters or grids must be in tiff or geoTiff format, with the 
 
 ## Licence information
 Please review individual dataset licence terms and conditions. Please note, while all care has been taken to ensure data is open data available for use, individual datasets will have their own licence conditions and citation requirements.
+
+## Community Analyses
+
+| [![Example 01](example_thumbnail.png)](https://nbviewer.org/github/derha/moja-global/blob/main/carpathian_montane_forests.ipynb) | -
+| [![Example 02](example_thumbnail.png)](https://nbviewer.org/github/Shubhams-2002/MojaGlobalDatasets/blob/main/Moja_global_datasets_done.ipynb) | -
+| [![Example 03](example_thumbnail.png)](https://nbviewer.org/github/Shubhams-2002/MojaGlobalDatasets/blob/main/WesternGhats.ipynb) | -
+| [![Example 04](example_thumbnail.png)](https://nbviewer.org/github/thushariii/MojaGlobal2022/blob/main/sinharaja_Rain_forest.ipynb) | 
+
+| [![Example 05](example_thumbnail.png)](https://nbviewer.org/github/coloeus-monedula/moja-global-22/blob/main/forest.ipynb) | -
+| [![Example 06](example_thumbnail.png)](https://nbviewer.org/github/maazingly/Outreachy-mojaglobal-EDA-NZ/blob/main/Geo%20EDA%20-%20New%20Zealand.ipynb) | -
+| [![Example 07](example_thumbnail.png)](https://nbviewer.org/github/Iman-L/Outreachy_iman_linje_2022/blob/main/2.%20Forest%20Types%20of%20Malawi.ipynb) | -
+| [![Example 08](example_thumbnail.png)](https://nbviewer.org/github/aldeav/Outreachy_Ananyashree_2022/blob/main/1_Data_Analysis.ipynb) |
+
+| [![Example 09](example_thumbnail.png)](https://nbviewer.org/github/mHienp/mojaglobal/blob/main/Yukon%20Interior%20dry%20forests.ipynb) | -
+| [![Example 10](example_thumbnail.png)](https://nbviewer.org/github/Boluwape/Outreachy_Boluwape_2022./blob/main/2022-10_Contribution-Outreachy/Moja_Global_Datasets_Crossriver_Forest_In_Nigeria.ipynb) | -
+| [![Example 11](example_thumbnail.png)](https://nbviewer.org/github/Boluwape/Outreachy_Boluwape_2022./blob/main/Growth_curves_data.ipynb) | -
+| [![Example 12](example_thumbnail.png)](https://nbviewer.org/github/Hafsah2020/Outreachy_Hafsah_Anibaba_2022/blob/main/favourite_forest_analysis.ipynb) | 
+
+| [![Example 13](example_thumbnail.png)](https://nbviewer.org/github/Hafsah2020/Outreachy_Hafsah_Anibaba_2022/blob/main/global_forest_analysis.ipynb) | -
+| [![Example 14](example_thumbnail.png)](https://nbviewer.org/github/saranda-2811/moja-global22/blob/main/cite.ipynb) | -
+| [![Example 15](example_thumbnail.png)](https://nbviewer.org/github/saranda-2811/moja-global22/blob/main/moja_global_forest1.ipynb) | -
+| [![Example 16](example_thumbnail.png)](https://nbviewer.org/github/anamika-yadav99/moja-global_task/blob/main/Forest_analysis.ipynb) |
+
+| [![Example 17](example_thumbnail.png)]() | -
+| [![Example 18](example_thumbnail.png)]() | -
+| [![Example 19](example_thumbnail.png)]() | -
+| [![Example 20](example_thumbnail.png)]() |
+
+| [![Example 21](example_thumbnail.png)]() | -
+| [![Example 22](example_thumbnail.png)]() | -
+| [![Example 23](example_thumbnail.png)]() | -
+| [![Example 24](example_thumbnail.png)]() |
